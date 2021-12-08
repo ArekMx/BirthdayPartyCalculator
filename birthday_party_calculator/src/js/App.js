@@ -1,7 +1,19 @@
 // import logo from './logo.svg';
-import './App.scss';
+import '../scss/App.scss';
+import {SelectedPrice} from '../js/SelectedPrice/SelectedPrice'
 
 function App() {
+
+  // Ustaw cenę od poniedziałku do czwartku:
+  const weekPrice = 38;
+
+  // Ustaw cenę w piątek:
+  const fridayPrice = 42;
+
+  // Ustaw cenę w wekend:
+  const weekedPrice = 44;
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -13,15 +25,15 @@ function App() {
           </tr>
           <tr>
             <th className={'week'}>Poniedziałek - czwartek</th>
-            <th>38 zł</th>
+            <th><SelectedPrice price={weekPrice} /></th>
           </tr>
           <tr>
             <th>piątek</th>
-            <th>42 zł</th>
+            <th><SelectedPrice price={fridayPrice} /></th>
           </tr>
           <tr>
             <th>sobota, niedziela i święta</th>
-            <th>44 zł</th>
+            <th><SelectedPrice price={weekedPrice} /></th>
           </tr>
         </tbody>
       </table>

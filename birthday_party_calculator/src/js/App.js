@@ -3,6 +3,8 @@ import '../scss/App.scss';
 import {SelectedPrice} from '../js/SelectedPrice/SelectedPrice'
 import React, {useState} from "react"
 
+import Slider from 'react-smooth-range-input';
+
 function App() {
 
   const [pricePerKid, setPricePerKid] = useState()
@@ -18,6 +20,7 @@ function App() {
 
   const setBtn = (currentPrice) => {
     setPricePerKid(currentPrice)
+
   }
 
   return (
@@ -48,6 +51,9 @@ function App() {
         </tbody>
       </table>
       </header>
+      <div>
+        <Slider value={numberOfKids} min={1} max={30} onChange={handleNumberOfKids} />
+      </div>
     </div>
   );
 }

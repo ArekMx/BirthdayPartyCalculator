@@ -2,12 +2,13 @@
 import '../scss/App.scss';
 import {SelectedPrice} from '../js/SelectedPrice/SelectedPrice'
 import React, {useState} from "react"
-
 import Slider from 'react-smooth-range-input';
 
 function App() {
 
   const [pricePerKid, setPricePerKid] = useState()
+  const [numberOfKids, setNumberOfKids] = useState('1');
+
 
   // Ustaw cenę od poniedziałku do czwartku:
   const weekPrice = 38;
@@ -23,8 +24,13 @@ function App() {
 
   }
 
+  const handleNumberOfKids =(selectedNumber) => {
+
+    setNumberOfKids(selectedNumber)
+}
+
   return (
-    <div className="App">
+    <div className="App container">
       <header className="App-header">
         <table>
         <tbody>
@@ -51,7 +57,7 @@ function App() {
         </tbody>
       </table>
       </header>
-      <div>
+      <div className="slider">
         <Slider value={numberOfKids} min={1} max={30} onChange={handleNumberOfKids} />
       </div>
     </div>

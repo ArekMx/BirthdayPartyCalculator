@@ -10,11 +10,9 @@ function App() {
   const [numberOfKids, setNumberOfKids] = useState('7');
   const [minNumSlider, setMinNumSlider] = useState('7');
 
-  const [total, setTotal] = useState('0');
+  // const [total, setTotal] = useState('0');
 
   const showSlider = (price) => {
-
-    
     if (price === "44") {
       setMinNumSlider(8) 
     } else {
@@ -58,15 +56,15 @@ function App() {
           </tr>
           <tr>
             <th className={'week'}>Poniedziałek - czwartek</th>
-            <th><SelectedPrice price={weekPrice} onAdd={setBtn}/></th>
+            <th><SelectedPrice price={weekPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
           </tr>
           <tr>
             <th>piątek</th>
-            <th><SelectedPrice price={fridayPrice} onAdd={setBtn}/></th>
+            <th><SelectedPrice price={fridayPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
           </tr>
           <tr>
             <th>sobota, niedziela i święta</th>
-            <th><SelectedPrice price={weekedPrice} onAdd={setBtn}/></th>
+            <th><SelectedPrice price={weekedPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
           </tr>
           <tr>
             <th>Wybrałeś cenę:</th>

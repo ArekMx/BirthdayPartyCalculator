@@ -1,6 +1,30 @@
 
+
 .App {
   text-align: center;
+  .App-header {
+    background-color:rgba(30, 255, 86, 0.795);
+    // min-height: 100vh;
+    min-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgba(172, 23, 23, 0.808);
+    margin: 20px;
+  }
+  .count {
+    margin: 50px;
+    padding: 15px;
+    background-color: indigo;
+    display: flex;
+    justify-content: center;
+
+    .slider {
+      width: 85%;
+    }
+  }
 }
 
 .App-logo {
@@ -9,18 +33,7 @@
   // pointer-events: none;
 }
 
-.App-header {
-  background-color:rgba(30, 255, 86, 0.795);
-  min-height: 100vh;
-  min-width: 50vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgba(172, 23, 23, 0.808);
 
-}
 
 .selected-button {
   cursor: pointer;

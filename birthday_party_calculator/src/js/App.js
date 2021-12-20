@@ -1,14 +1,32 @@
 // import logo from './logo.svg';
-import '../scss/App.scss';
+
 import {SelectedPrice} from '../js/SelectedPrice/SelectedPrice'
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Slider from 'react-smooth-range-input';
 
 function App() {
 
-  const [pricePerKid, setPricePerKid] = useState()
-  const [numberOfKids, setNumberOfKids] = useState('1');
+  const [pricePerKid, setPricePerKid] = useState('');
+  const [numberOfKids, setNumberOfKids] = useState('7');
+  const [minNumSlider, setMinNumSlider] = useState('7');
 
+  const [total, setTotal] = useState('0');
+
+  const showSlider = (price) => {
+
+    
+    if (price === "44") {
+      setMinNumSlider(8) 
+    } else {
+      setMinNumSlider(7)
+    }
+  }
+
+  useEffect (() => {
+    showSlider(pricePerKid);
+  }, [pricePerKid]);
+
+  
 
   // Ustaw cenę od poniedziałku do czwartku:
   const weekPrice = 38;
@@ -27,7 +45,7 @@ function App() {
   const handleNumberOfKids =(selectedNumber) => {
 
     setNumberOfKids(selectedNumber)
-}
+  }
 
   return (
     <div className="App container">
@@ -55,11 +73,18 @@ function App() {
             <th>{pricePerKid}</th>
           </tr>
         </tbody>
-      </table>
+        </table>
       </header>
-      <div className="slider">
-        <Slider value={numberOfKids} min={1} max={30} onChange={handleNumberOfKids} />
-      </div>
+      <section className="count">
+        <div className="slider">
+          <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids} />
+        </div>     
+      </section>
+      <section className="total">
+        <div>
+          <p>{numberOfKids * pricePerKid} zł</p>
+        </div>
+      </section>
     </div>
   );
 }

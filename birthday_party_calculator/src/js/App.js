@@ -77,12 +77,13 @@ function App() {
       </header>
       <section className="count">
         <div className="slider">
+          <h1 style={{color: "yellow"}}>Wybierz liczbę dzieci:</h1>
           <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids} />
         </div>     
       </section>
       <section className="total">
         <div>
-          <p>{numberOfKids * pricePerKid} zł</p>
+          <h1>{numberOfKids * pricePerKid} zł</h1>
         </div>
       </section>
     </div>

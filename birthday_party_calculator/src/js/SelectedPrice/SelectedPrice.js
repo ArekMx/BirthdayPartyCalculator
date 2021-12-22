@@ -1,35 +1,34 @@
-import React, {useState} from "react"
+// import React, {useState} from "react"
 
 export const SelectedPrice =({price, onAdd, currentPrice}) => {
 
-    const [colorBtn, setColorBtn] = useState("");
+    // const [colorBtn, setColorBtn] = useState("");
 
-    const handleOnEnter =()=> {
-        setColorBtn(prevState => !prevState)
-        console.log(currentPrice);
-        // console.log(price);
+    // const handleOnEnter =()=> {
+    //     setColorBtn(prevState => !prevState)
+    // }
+    
+    const styleOnClick =(x) =>{
+        return parseFloat(currentPrice) === price ? x : null
     }
-    
-    console.log(colorBtn);
-    console.log(typeof(parseFloat(currentPrice)));
-    console.log(typeof(price));
-    
+
+    const boxShadow = "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)"
+
     return (
             <div>
-                {/* <button onMouseEnter={handleOnEnter} style={{backgroundColor: parseFloat(currentPackage) === price ? "#fff500" : colorBtn,
-                    color: parseFloat(currentPackage) === price ? "#00aa00" : colorBtn }}
-                        value={price} onClick={event => onAdd(event.target.value) }
-                        className={"selected-button"}>{price}zł</button> */}
                 <button
                 value={price}
-                // onClick={event => onAdd(event.target.value)}
                 onClick={event => onAdd(event.target.value)}
-                onMouseEnter={handleOnEnter}  
-                style={{backgroundColor: parseFloat(currentPrice) === price ? "red" : colorBtn,
-                    color: parseFloat(currentPrice) === price ? "yellow" : colorBtn }}
-                className={"selected-button"}>{price}</button>
+                // onMouseEnter={handleOnEnter}  
+                style={{
+                        backgroundColor: styleOnClick("purple"),
+                        color: styleOnClick("yellow"),
+                        transform: styleOnClick("none"),
+                        boxShadow: styleOnClick(boxShadow),
+                    }}
+                className={
+                    "button"
+                }>{price} zł</button>
             </div>
     )
 }
-
-// <button style={{color: colorBtn2? "red" : "black"}} value={secondWeekPrice} onClick={event => {setPacage(event.target.value);setColorBtn2("red");}} className={"selected-button"}>399zł</button>

@@ -1,4 +1,4 @@
-
+@import './partials/mixins';
 
 .App {
   text-align: center;
@@ -13,37 +13,26 @@
     font-size: calc(10px + 2vmin);
     color: rgba(172, 23, 23, 0.808);
     margin: 20px;
+    @include shadowBoxes;
   }
+
   .count {
     margin: 50px;
     padding: 15px;
     background-color: indigo;
     display: flex;
     justify-content: center;
-
     .slider {
       width: 85%;
     }
+    @include shadowBoxes;
+  }
+
+  .total {
+    color: purple;
+    font-size: large;
+    background-color: fuchsia;
+    @include shadowBoxes;
   }
 }
 
-.App-logo {
-  height: 40vmin;
-  width: 40vmin;
-  // pointer-events: none;
-}
-
-
-
-.selected-button {
-  cursor: pointer;
-  outline: none;
-  background: none;
-  border: none;
-  font-weight: bold;
-  // font-family: $text_font;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 20px;
-  color: blue;
-}

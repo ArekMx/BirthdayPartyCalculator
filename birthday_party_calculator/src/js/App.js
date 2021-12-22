@@ -57,18 +57,17 @@ function App() {
           <tr>
             <th className={'week'}>Poniedziałek - czwartek</th>
             <th><SelectedPrice price={weekPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
+            <th>Min. liczba dzieci - 7</th>
           </tr>
           <tr>
             <th>piątek</th>
             <th><SelectedPrice price={fridayPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
+            <th>Min. liczba dzieci - 7</th>
           </tr>
           <tr>
             <th>sobota, niedziela i święta</th>
             <th><SelectedPrice price={weekedPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-          </tr>
-          <tr>
-            <th>Wybrałeś cenę:</th>
-            <th>{pricePerKid}</th>
+            <th>Min. liczba dzieci - 8</th>
           </tr>
         </tbody>
         </table>

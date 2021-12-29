@@ -3,7 +3,7 @@
 .App {
   text-align: center;
   .App-header {
-    @include displayFlex-Center;
+    @include displayFlex(center);
     font-size: calc(10px + 2vmin);
     color: $dark-red;
     @include shadowBoxes ($green);
@@ -21,7 +21,7 @@
         color: $yellow;  
       }
     }
-    @include displayFlex-Center;
+    @include displayFlex(center);
     @include shadowBoxes($indigo);
     @include marginBoxes;
   }
@@ -29,9 +29,24 @@
   .total {
     margin: auto;
     padding: 10px;
-    max-width: 300px;
+    max-width: 600px;
     color: $purple;
+    flex-wrap: wrap;
+    
+    @include displayFlex(space-between);
     @include shadowBoxes($fuchsia);
+    h1 { 
+      font-size: 2rem;
+    }
+    // .total__text {
+    //   @include shadowBoxes($blue_background)
+    // }
+    // .total__price {
+    //   h1 { 
+    //     font-size: 3rem;
+    //   }
+      // @include shadowBoxes($blue_background)
+    // }
   }
 }
 

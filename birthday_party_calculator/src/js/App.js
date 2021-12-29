@@ -40,11 +40,19 @@ function App() {
     setPricePerKid(currentPrice)
 
   }
-
   const handleNumberOfKids =(selectedNumber) => {
-
     setNumberOfKids(selectedNumber)
   }
+
+////// Component Atractions
+const [priceTotalAtractions, setPriceTotalAtractions] = useState('')
+
+const totalAtractions = (totalAtractions) => {
+      setPriceTotalAtractions(totalAtractions)
+}
+
+console.log(priceTotalAtractions);
+
 
   return (
     <div className="App container">
@@ -80,11 +88,14 @@ function App() {
         </div>     
       </section>
       <section>
-        <ComponentAtractions />
+        <ComponentAtractions onUp={totalAtractions}/>
       </section>
       <section className="total">
-        <div>
-          <h1>Łączna kwota imprezy urodzinowej: {numberOfKids * pricePerKid} zł</h1>
+        <div className="total__text">
+          <h1 >Łączna kwota imprezy urodzinowej:</h1>
+        </div>
+        <div className="total__price">
+          <h1>{numberOfKids * pricePerKid} zł</h1>
         </div>
       </section>
     </div>

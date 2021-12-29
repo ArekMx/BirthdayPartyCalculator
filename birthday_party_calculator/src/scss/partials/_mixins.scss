@@ -11,10 +11,10 @@
     margin: 20px;
 }
 
-@mixin displayFlex-Center {
+@mixin displayFlex($justify-content) {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: $justify-content;
 }
 
 

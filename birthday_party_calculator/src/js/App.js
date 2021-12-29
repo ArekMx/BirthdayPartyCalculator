@@ -3,6 +3,7 @@
 import {SelectedPrice} from '../js/SelectedPrice/SelectedPrice'
 import React, {useState, useEffect} from "react"
 import Slider from 'react-smooth-range-input';
+import { ComponentAtractions } from "../js/Component-atractions/Component-atractions";
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
             <th>Własny barek</th>
           </tr>
           <tr>
-            <th className={'week'}>Poniedziałek - czwartek</th>
+            <th className={'cell'}>Poniedziałek - czwartek</th>
             <th><SelectedPrice price={weekPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
             <th>Min. liczba dzieci - 7</th>
           </tr>
@@ -78,9 +79,12 @@ function App() {
           <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids} />
         </div>     
       </section>
+      <section>
+        <ComponentAtractions />
+      </section>
       <section className="total">
         <div>
-          <h1>{numberOfKids * pricePerKid} zł</h1>
+          <h1>Łączna kwota imprezy urodzinowej: {numberOfKids * pricePerKid} zł</h1>
         </div>
       </section>
     </div>

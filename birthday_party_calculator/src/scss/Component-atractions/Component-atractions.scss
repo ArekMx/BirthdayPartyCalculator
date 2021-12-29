@@ -1,0 +1,39 @@
+@import '../partials/mixins';
+@import '../partials/colors';
+
+
+.atractions {
+    margin: 50px 20px;
+    padding: 30px;
+    @include shadowBoxes($dark-green);
+    .sliders {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        .atractions-slider {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            letter-spacing: 1;
+            align-items: center;
+            .pigtails {
+                color: $light-green;
+            }
+            .face-painting {
+                color: $fuchsia;
+            }
+            .tatoos {
+                color: $orange;
+            }
+            .baloons {
+                color: $green;
+            }
+            .atractions-title {
+                display: inline-block;
+                letter-spacing: 1;
+            }
+        }
+    }
+}

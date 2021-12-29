@@ -3,11 +3,10 @@
 .App {
   text-align: center;
   .App-header {
-    background-color: $green;
     @include displayFlex-Center;
     font-size: calc(10px + 2vmin);
     color: $dark-red;
-    @include shadowBoxes;
+    @include shadowBoxes ($green);
     @include marginBoxes;
     th {
       padding: 15px;
@@ -15,7 +14,6 @@
   }
 
   .count {
-    background-color: $indigo;
     .slider {
       width: 85%;
       @include marginBoxes;
@@ -24,17 +22,16 @@
       }
     }
     @include displayFlex-Center;
-    @include shadowBoxes;
+    @include shadowBoxes($indigo);
     @include marginBoxes;
   }
 
   .total {
     margin: auto;
     padding: 10px;
-    max-width: 100px;
+    max-width: 300px;
     color: $purple;
-    background-color: $fuchsia;
-    @include shadowBoxes;
+    @include shadowBoxes($fuchsia);
   }
 }
 

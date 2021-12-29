@@ -1,9 +1,10 @@
 @import './colors';
 
 
-@mixin shadowBoxes {
+@mixin shadowBoxes($background) {
     box-shadow: 0 3px 8px 4px $blue_sky;
     border-radius: 20px;
+    background-color: $background;
 }
 
 @mixin marginBoxes {

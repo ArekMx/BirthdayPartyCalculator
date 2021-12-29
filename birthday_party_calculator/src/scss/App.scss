@@ -9,6 +9,9 @@
     color: $dark-red;
     @include shadowBoxes;
     @include marginBoxes;
+    th {
+      padding: 15px;
+    }
   }
 
   .count {

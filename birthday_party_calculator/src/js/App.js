@@ -74,7 +74,7 @@ function App() {
       </header>
       <section className="count">
         <div className="slider">
-          <h1 style={{color: "yellow"}}>Wybierz liczbę dzieci:</h1>
+          <h1 className="slider-title">Wybierz liczbę dzieci:</h1>
           <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids} />
         </div>     
       </section>

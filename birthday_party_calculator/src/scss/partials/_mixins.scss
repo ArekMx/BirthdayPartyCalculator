@@ -2,8 +2,18 @@
 
 
 @mixin shadowBoxes {
-    box-shadow: 0 3px 8px 4px rgb(16, 130, 165);
+    box-shadow: 0 3px 8px 4px $blue_sky;
     border-radius: 20px;
+}
+
+@mixin marginBoxes {
+    margin: 20px;
+}
+
+@mixin displayFlex-Center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

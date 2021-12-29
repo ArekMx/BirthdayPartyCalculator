@@ -4,14 +4,14 @@
 
 /* --- Imports from partials here --- */
 @import './scss/partials/root';
+@import './scss/partials/colors';
 
 
 
 body {
-  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  background-color:rgba(0, 102, 255, 0.795);
+  background-color: $blue;
 }
 
 .container {

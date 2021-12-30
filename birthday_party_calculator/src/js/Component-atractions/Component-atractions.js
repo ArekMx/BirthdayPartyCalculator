@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
 import Slider from 'react-smooth-range-input';
 
-export const ComponentAtractions =(onUp) => {
+export const ComponentAtractions =({onUp}) => {
     
     // const [{pigtails, setPigtails},
     //        {facePainting, setFacePainting},
@@ -21,26 +21,14 @@ export const ComponentAtractions =(onUp) => {
     const handleNumberOfBaloons = (selected) => {setBaloons(selected)};
     
 
+
       
     useEffect (() => {
         setTotalAtractions(pigtails*12 + facePainting*10 + tatoos*8 + baloons*4);
         
       }, [pigtails, facePainting, tatoos, baloons]);
 
-    //   console.log(totalAtsractions);
-    
-    // onUp(totalAtractions);
-    // const sendTotalPriceAtractionsUp = (total) => {
-    //     onUp(total)
-    // }
-
-    // sendTotalPriceAtractionsUp(totalAtractions)
-
-    // // useEffect (()=> {
-    // //     sendTotalPriceAtractionsUp(totalAtractions)
-
-    // // },[])
-      
+    onUp(totalAtractions);
 
     
 

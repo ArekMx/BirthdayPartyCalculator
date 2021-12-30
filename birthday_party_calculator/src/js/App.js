@@ -45,14 +45,13 @@ function App() {
   }
 
 ////// Component Atractions
-const [priceTotalAtractions, setPriceTotalAtractions] = useState('')
+
+const [total, setTotal] = useState();
 
 const totalAtractions = (totalAtractions) => {
-      setPriceTotalAtractions(totalAtractions)
+
+  setTotal(numberOfKids * pricePerKid + totalAtractions)
 }
-
-console.log(priceTotalAtractions);
-
 
   return (
     <div className="App container">
@@ -95,7 +94,7 @@ console.log(priceTotalAtractions);
           <h1 >Łączna kwota imprezy urodzinowej:</h1>
         </div>
         <div className="total__price">
-          <h1>{numberOfKids * pricePerKid} zł</h1>
+          <h1>{total} zł</h1>
         </div>
       </section>
     </div>

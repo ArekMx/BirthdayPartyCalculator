@@ -32,6 +32,8 @@
     max-width: 600px;
     color: $purple;
     flex-wrap: wrap;
+    position: sticky;
+    bottom: 0;
     
     @include displayFlex(space-between);
     @include shadowBoxes($fuchsia);
@@ -41,12 +43,13 @@
     // .total__text {
     //   @include shadowBoxes($blue_background)
     // }
-    // .total__price {
-    //   h1 { 
-    //     font-size: 3rem;
-    //   }
+    .total__price {
+      
+      // h1 { 
+      //   font-size: 3rem;
+      // }
       // @include shadowBoxes($blue_background)
-    // }
+    }
   }
 }
 

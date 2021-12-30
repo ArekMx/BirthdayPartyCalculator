@@ -54,7 +54,7 @@ export const ComponentAtractions =({onUp}) => {
                 <Slider value={0} min={0} max={30} onChange={handleNumberOfBaloons} />
             </div>
             <div className="atractions-slider">
-                <h1 className="atractions-title baloons">Cena za atrkacje: {totalAtractions} zł</h1>
+                <h1 className="atractions-title baloons" style={{color: "white"}}> Cena za atrakcje: {totalAtractions} zł</h1>
             </div>
             </div> 
         </div> 

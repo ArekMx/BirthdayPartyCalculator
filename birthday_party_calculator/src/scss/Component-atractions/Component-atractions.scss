@@ -6,6 +6,9 @@
     margin: 50px 20px;
     padding: 30px;
     @include shadowBoxes($dark-green);
+    .slider-title {
+        color: coral;
+    }
     .sliders {
         display: flex;
         justify-content: space-between;
@@ -36,4 +39,10 @@
             }
         }
     }
+    .total-atractions {
+        display: inline-block;
+        margin: 1.5rem;
+        color: $gold;
+    }
+
 }

@@ -1,4 +1,5 @@
 @import './partials/mixins';
+@import './partials/colors';
 
 .App {
   text-align: center;
@@ -19,7 +20,8 @@
       width: 85%;
       @include marginBoxes;
       .slider-title {
-        color: $yellow;  
+        color: $yellow;
+        font-size: 30px;
       }
     }
     @include displayFlex(center);
@@ -35,22 +37,11 @@
     flex-wrap: wrap;
     position: sticky;
     bottom: 0;
-    
     @include displayFlex(space-between);
-    @include shadowBoxes($fuchsia);
-    h1 { 
-      font-size: 1.2rem;
-    }
-    // .total__text {
-    //   @include shadowBoxes($blue_background)
+    @include shadowBoxes($orange-pastel);
+    // .total__text{
+    //   color: $fuchsia;
     // }
-    .total__price {
-      
-      // h1 { 
-      //   font-size: 3rem;
-      // }
-      // @include shadowBoxes($blue_background)
-    }
   }
 }
 

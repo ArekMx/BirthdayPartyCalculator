@@ -42,29 +42,29 @@ export const ComponentTableSelect =({numOfkids}) => {
 
   numOfkids(numberOfKids, pricePerKid);
 
-
+  const minNum = "min.liczba dzieci"
     return (
             <>
             <table>
                 <tbody>
                     <tr>
                         <th>Dni w tygodniu</th>
-                        <th>Własny barek</th>
+                        <th>Wybierz kwotę:</th>
                     </tr>
                     <tr>
                         <th className={'cell'}>Poniedziałek - czwartek</th>
                         <th><SelectedPrice price={weekPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                        <th>Min. liczba dzieci - 7</th>
+                        <th>7-{minNum}</th>
                     </tr>
                     <tr>
                         <th>piątek</th>
                         <th><SelectedPrice price={fridayPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                        <th>Min. liczba dzieci - 7</th>
+                        <th>7-{minNum}</th>
                     </tr>
                     <tr>
                         <th>sobota, niedziela i święta</th>
                         <th><SelectedPrice price={weekedPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                        <th>Min. liczba dzieci - 8</th>
+                        <th>8-{minNum}</th>
                     </tr>
                 </tbody>
             </table>

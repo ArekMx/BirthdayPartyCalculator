@@ -10,9 +10,7 @@
         color: coral;
     }
     .sliders {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include displayFlex(space-between);
         flex-wrap: wrap;
         text-align: center;
         .atractions-slider {

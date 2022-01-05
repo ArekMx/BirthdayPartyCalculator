@@ -13,16 +13,8 @@ export const ComponentAtractions =({onUp}) => {
     const [facePainting, setFacePainting] = useState(''); 
     const [tatoos, setTatoos] = useState(''); 
     const [baloons, setBaloons] = useState('');
-    const [totalAtractions, setTotalAtractions] = useState('')       
-    
-    const handleNumberOfPigtails = (selected) => {setPigtails(selected)};
-    const handleNumberOfFacePainting = (selected) => {setFacePainting(selected)};
-    const handleNumberOfTatoos = (selected) => {setTatoos(selected)};
-    const handleNumberOfBaloons = (selected) => {setBaloons(selected)};
-    
+    const [totalAtractions, setTotalAtractions] = useState('');       
 
-
-      
     useEffect (() => {
         setTotalAtractions(pigtails*12 + facePainting*10 + tatoos*8 + baloons*4);
         
@@ -30,32 +22,48 @@ export const ComponentAtractions =({onUp}) => {
 
     onUp(totalAtractions);
 
-    
 
+    // /// Slider min number
+
+    // const [pigtailsMin, setPigtailsMin] = useState(0);
+
+
+    //   const check =()=> {
+    //       if (pigtails === 0) {
+    //           setPigtailsMin(0)
+    //       }
+    //   }
+
+    // useEffect (()=> {
+    //     check();
+    // }, [pigtails]);  
+
+    
     return (
         <>
         <div className="atractions">
-            <h1 className="slider-title">Ustaw ilość dzieci które skorzystają z poniższych atrakcji (płatne od dziecka):</h1>
+            <h1 className="slider-title">Ustaw ilość dzieci, które skorzystają z poniższych atrakcji (płatne od dziecka):</h1>
             <div className="sliders">
             <div className="atractions-slider">
                 <h1 className="atractions-title pigtails">Warkoczyki - 12 zł </h1>
-                <Slider value={0} min={0} max={30} onChange={handleNumberOfPigtails} />
+                <Slider value={0} min={0} max={30} onChange={(x) => setPigtails(x)} />
+                {/* <button onClick={()=>{setPigtails(''); setPigtailsMin(0); console.log(pigtailsMin);}}>reset</button> */}
             </div>
             <div className="atractions-slider">
                 <h1 className="atractions-title face-painting ">Malowanie twarzy - 10 zł</h1>
-                <Slider value={0} min={0} max={30} onChange={handleNumberOfFacePainting} />
+                <Slider value={0} min={0} max={30} onChange={(x) => setFacePainting(x)} />
             </div>
             <div className="atractions-slider">
                 <h1 className="slider-title tatoos">Tatuaże - 8 zł</h1>
-                <Slider value={0} min={0} max={30} onChange={handleNumberOfTatoos} />
+                <Slider value={0} min={0} max={30} onChange={(x) => setTatoos(x)} />
             </div>
             <div className="atractions-slider">
                 <h1 className="atractions-title baloons">Balonik modelowany (figurka zoo) - 4 zł</h1>
-                <Slider value={0} min={0} max={30} onChange={handleNumberOfBaloons} />
+                <Slider value={0} min={0} max={30} onChange={(x) => setBaloons(x)} />
             </div>
             </div>
             <div className="total-atractions">
-                <h1 style={{color: "gold"}}> Cena za atrakcje: {totalAtractions} zł</h1>
+                <h1> Cena za atrakcje: {totalAtractions} zł</h1>
             </div> 
         </div> 
         </>

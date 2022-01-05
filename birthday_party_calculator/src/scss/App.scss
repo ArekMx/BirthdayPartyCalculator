@@ -21,7 +21,7 @@
       @include marginBoxes;
       .slider-title {
         color: $yellow;
-        font-size: 30px;
+        // font-size: 30px;
       }
     }
     @include displayFlex(center);

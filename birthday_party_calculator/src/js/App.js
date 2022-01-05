@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
 
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect, Component} from "react"
 
 import { ComponentAtractions } from "../js/Component-atractions/ComponentAtractions";
 import { ComponentTableSelect } from "./Component-table-select/TableSelect";
+import { ComponentExtras } from './Component-extras/ComponentExtras'
 
 function App() {
 
@@ -21,7 +22,6 @@ function App() {
   const totalllAtractions = (totalAtractions) => {
 
     setTotalAtractions(totalAtractions)
-    console.log(totalAtractions);
   }
 
 
@@ -33,6 +33,10 @@ function App() {
       <section>
         <ComponentAtractions onUp={totalllAtractions}/>
       </section>
+      <section className="extras">
+        <ComponentExtras/>
+      </section>
+
       <section className="total">
         <div className="total__text">
           <h1 >Łączna kwota imprezy urodzinowej:</h1>

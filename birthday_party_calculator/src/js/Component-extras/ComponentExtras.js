@@ -1,4 +1,6 @@
 import { Extra } from './Extra/Extra'
+import { ExtraBaloons } from './Extra-baloons/ExtraBaloons';
+import React, {useState, useEffect} from "react"
 
 export const ComponentExtras =() => {
     
@@ -35,27 +37,39 @@ export const ComponentExtras =() => {
 
     }
 
+    const [extraPrice, setExtraPrice] = useState()
+
+    const addExtras =(extraValue)=> {
+        setExtraPrice(extraValue)
+    }
+
+    const [extraPriceBaloons, setExtraPriceBaloons] = useState()
+    
+    const addExtrasBaloons =(extraValue)=> {
+        setExtraPriceBaloons(extraValue)
+    }
+
     return (
             <>
                 <div className={"assistant"}>
-                    <Extra price={extra.assistant.price} name={extra.assistant.title} className="btn-assistant"/>
+                    <Extra price={extra.assistant.price} name={extra.assistant.title} className="btn-assistant" onAdd={addExtras} currentExtra={extraPrice}/>
                 </div>
                 <div className="bouquet">
                     <h3 className={"bouquet-title"}>BUKIETY BALONOWE</h3>
                     <div className={"bouquet-btns"}>
                         <div className="btn-bouquet">
-                            <Extra price={extra.bouquet[1].price} name={extra.bouquet[1].balloon} className="btn-baloons"/>
+                            <ExtraBaloons price={extra.bouquet[1].price} name={extra.bouquet[1].balloon} className="btn-baloons" onAdd={addExtrasBaloons} currentExtra={extraPriceBaloons}/>
                         </div>
                         <div className="btn-bouquet">
-                            <Extra price={extra.bouquet[2].price} name={extra.bouquet[2].balloon} className="btn-baloons"/>
+                            <ExtraBaloons price={extra.bouquet[2].price} name={extra.bouquet[2].balloon} className="btn-baloons" onAdd={addExtrasBaloons} currentExtra={extraPriceBaloons}/>
                         </div>
                         <div className="btn-bouquet">
-                            <Extra price={extra.bouquet[3].price} name={extra.bouquet[3].balloon} className="btn-baloons"/>
+                            <ExtraBaloons price={extra.bouquet[3].price} name={extra.bouquet[3].balloon} className="btn-baloons" onAdd={addExtrasBaloons} currentExtra={extraPriceBaloons}/>
                         </div>  
                     </div>
                 </div>
                 <div className={"numberBaloon"}>
-                    <Extra price={extra.numberBaloon.price} name={extra.numberBaloon.title} className="btn-number"/>
+                    <Extra price={extra.numberBaloon.price} name={extra.numberBaloon.title} className="btn-number" onAdd={addExtras} currentExtra={extraPrice}/>
                 </div>
             </>
     )

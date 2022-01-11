@@ -2,32 +2,7 @@
 @import '../partials/colors';
 
   .button {
-    cursor: pointer;
-    outline: none;
-    background: none;
-    border: none;
-    padding: .5rem 1.7rem;
-    margin: 1.5rem;
-    text-align: center;
-    display: inline-block;
-    font-size: 1.3rem;
-    // text-transform: uppercase;
-    font-weight: 700;
-    position: relative;
-    will-change: transform;
-    letter-spacing: .05rem;
-    position: relative;
-    background: $white;
-    // color: $deeper;
-    overflow: hidden;
-    transition: .3s ease-in-out;
-    border-radius: .3rem;
-    
-    @include box_shadow(5);
-    &:hover {
-      color: $yellow;
-      background-color: $purple;
-    }
+    @include btn($deeper, $purple)
   }
 
   

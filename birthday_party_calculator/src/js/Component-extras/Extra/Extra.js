@@ -9,7 +9,7 @@ export const Extra =({price, name, className, onAdd, currentExtra}) => {
 
     // const boxShadowStyle = "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)"
 
-    const [styleBtn, setStyleBtn] = useState();
+    const [styleBtn, setStyleBtn] = useState(false);
 
     const handleAddAddition =(event) => {
 
@@ -39,9 +39,11 @@ export const Extra =({price, name, className, onAdd, currentExtra}) => {
                 <button
                 value={price}
                 onClick={handleAddAddition}
-                style={{color: styleBtn ? "gold" : null, 
-                background: styleBtn ? "olivedrab" : null,
-                boxShadow: styleBtn ? boxShadowStyle : null}}
+                style={{
+                    color: styleBtn ? "#fff901" : null, 
+                    background: styleBtn ? "olivedrab" : null,
+                    boxShadow: styleBtn ? boxShadowStyle : null
+                    }}
                 className={className}>{price} zł - {name}</button>
             </div>
     )

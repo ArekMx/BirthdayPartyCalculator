@@ -34,7 +34,7 @@ export const ExtraBaloons =({price, name, className, onAdd, currentExtra}) => {
                 value={price}
                 onClick={handleAddAddition}
                 style={{
-                    backgroundColor: styleOnClick("purple"),
+                    backgroundColor: styleOnClick("#002486"),
                     color: styleOnClick("yellow"),
                     transform: styleOnClick("none"),
                     boxShadow: styleOnClick(boxShadowStyle)

@@ -2,14 +2,8 @@ import { Extra } from './Extra/Extra'
 import { ExtraBaloons } from './Extra-baloons/ExtraBaloons';
 import React, {useState, useEffect} from "react"
 
-export const ComponentExtras =() => {
+export const ComponentExtras =({onAddTotalExtras}) => {
     
-    // const styleOnClick =(x) =>{
-    //     return parseFloat(currentPrice) === price ? x : null
-    // }
-
-    // const boxShadowStyle = "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)"
-
 
     const extra = {
         assistant: {
@@ -37,39 +31,41 @@ export const ComponentExtras =() => {
 
     }
 
-    const [extraPrice, setExtraPrice] = useState()
-
-    const addExtras =(extraValue)=> {
-        setExtraPrice(extraValue)
-    }
-
-    const [extraPriceBaloons, setExtraPriceBaloons] = useState()
+    const [extraPriceAssistant, setExtraPriceAssistant] = useState('');
+    const [extraNumBaloon, setExtraNumBaloon] = useState('');
+    const [extraPriceBaloons, setExtraPriceBaloons] = useState('');
     
-    const addExtrasBaloons =(extraValue)=> {
-        setExtraPriceBaloons(extraValue)
-    }
+    const [totalExtras, setTotalExtras] = useState('');
+
+    useEffect (()=> {
+
+        setTotalExtras(Number(extraPriceAssistant) + Number(extraNumBaloon) + Number(extraPriceBaloons));
+
+    },[extraPriceAssistant, extraNumBaloon, extraPriceBaloons]);
+
+    onAddTotalExtras(totalExtras);
 
     return (
             <>
                 <div className={"assistant"}>
-                    <Extra price={extra.assistant.price} name={extra.assistant.title} className="btn-assistant" onAdd={addExtras} currentExtra={extraPrice}/>
+                    <Extra price={extra.assistant.price} name={extra.assistant.title} className="btn-assistant" onAdd={x=>setExtraPriceAssistant(x)} currentExtra={extraPriceAssistant}/>
                 </div>
                 <div className="bouquet">
                     <h3 className={"bouquet-title"}>BUKIETY BALONOWE</h3>
                     <div className={"bouquet-btns"}>
                         <div className="btn-bouquet">
-                            <ExtraBaloons price={extra.bouquet[1].price} name={extra.bouquet[1].balloon} className="btn-baloons" onAdd={addExtrasBaloons} currentExtra={extraPriceBaloons}/>
+                            <ExtraBaloons price={extra.bouquet[1].price} name={extra.bouquet[1].balloon} className="btn-baloons" onAdd={x=>setExtraPriceBaloons(x)} currentExtra={extraPriceBaloons}/>
                         </div>
                         <div className="btn-bouquet">
-                            <ExtraBaloons price={extra.bouquet[2].price} name={extra.bouquet[2].balloon} className="btn-baloons" onAdd={addExtrasBaloons} currentExtra={extraPriceBaloons}/>
+                            <ExtraBaloons price={extra.bouquet[2].price} name={extra.bouquet[2].balloon} className="btn-baloons" onAdd={x=>setExtraPriceBaloons(x)} currentExtra={extraPriceBaloons}/>
                         </div>
                         <div className="btn-bouquet">
-                            <ExtraBaloons price={extra.bouquet[3].price} name={extra.bouquet[3].balloon} className="btn-baloons" onAdd={addExtrasBaloons} currentExtra={extraPriceBaloons}/>
+                            <ExtraBaloons price={extra.bouquet[3].price} name={extra.bouquet[3].balloon} className="btn-baloons" onAdd={x=>setExtraPriceBaloons(x)} currentExtra={extraPriceBaloons}/>
                         </div>  
                     </div>
                 </div>
                 <div className={"numberBaloon"}>
-                    <Extra price={extra.numberBaloon.price} name={extra.numberBaloon.title} className="btn-number" onAdd={addExtras} currentExtra={extraPrice}/>
+                    <Extra price={extra.numberBaloon.price} name={extra.numberBaloon.title} className="btn-number" onAdd={x=>setExtraNumBaloon(x)} currentExtra={extraNumBaloon}/>
                 </div>
             </>
     )

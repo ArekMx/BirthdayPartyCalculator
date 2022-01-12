@@ -39,9 +39,9 @@
 }
 
 .btn-baloons {
-    @include btn($deeper, $purple);
+    @include btn($purple, $purple);
 }
 
 .btn-number {
-    @include btn($fuchsia, $blue_sky);
+    @include btn($olivedrab, $olivedrab);
 }

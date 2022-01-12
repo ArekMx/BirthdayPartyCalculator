@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 
-import React, {useState, useEffect, Component} from "react"
+import React, {useState, useEffect} from "react"
 
 import { ComponentAtractions } from "../js/Component-atractions/ComponentAtractions";
 import { ComponentTableSelect } from "./Component-table-select/TableSelect";
@@ -11,17 +11,15 @@ function App() {
   const [total, setTotal] = useState('0');
 
 
-  const [totalAtractions, setTotalAtractions] = useState('')  
+  const [totalAtractions, setTotalAtractions] = useState('');
+  const [totalExtras, setTotalExtras] = useState('');  
+  
+  // console.log(totalExtras);
 
   const totalAll = (numOfKids, moneyPerKid) => {
 
-    setTotal(numOfKids * moneyPerKid + totalAtractions)
+    setTotal(numOfKids * moneyPerKid + totalAtractions + totalExtras);
 
-  }
-
-  const totalllAtractions = (totalAtractions) => {
-
-    setTotalAtractions(totalAtractions)
   }
 
 
@@ -31,10 +29,10 @@ function App() {
         <ComponentTableSelect numOfkids={totalAll}/>
       </header>
       <section>
-        <ComponentAtractions onUp={totalllAtractions}/>
+        <ComponentAtractions onUp={x=>setTotalAtractions(x)}/>
       </section>
       <section className="extras">
-        <ComponentExtras/>
+        <ComponentExtras onAddTotalExtras={x=>setTotalExtras(x)}/>
       </section>
 
       <section className="total">

@@ -32,6 +32,10 @@
       @include shadowBoxes ($yellow);
       margin: 20px;
   }
+  .piniata{
+    @include shadowBoxes ($yellow);
+    margin: 20px;
+}
 }
 
 .btn-assistant {
@@ -44,4 +48,8 @@
 
 .btn-number {
     @include btn($olivedrab, $olivedrab);
+}
+
+.btn-pinata {
+  @include btn($olivedrab, $olivedrab);
 }

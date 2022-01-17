@@ -28,20 +28,25 @@ export const ComponentExtras =({onAddTotalExtras}) => {
             price: 30,
             title: "Balon cyfra na powietrze",
         },
+        piñata: {
+            price: 100,
+            title: "Piniata"
+        }
 
     }
 
     const [extraPriceAssistant, setExtraPriceAssistant] = useState('');
     const [extraNumBaloon, setExtraNumBaloon] = useState('');
     const [extraPriceBaloons, setExtraPriceBaloons] = useState('');
+    const [extraPricePinata, setExtraPricePinata] = useState('');
     
     const [totalExtras, setTotalExtras] = useState('');
 
     useEffect (()=> {
 
-        setTotalExtras(Number(extraPriceAssistant) + Number(extraNumBaloon) + Number(extraPriceBaloons));
+        setTotalExtras(Number(extraPriceAssistant) + Number(extraNumBaloon) + Number(extraPriceBaloons) + Number(extraPricePinata));
 
-    },[extraPriceAssistant, extraNumBaloon, extraPriceBaloons]);
+    },[extraPriceAssistant, extraNumBaloon, extraPriceBaloons, extraPricePinata]);
 
     onAddTotalExtras(totalExtras);
 
@@ -66,6 +71,9 @@ export const ComponentExtras =({onAddTotalExtras}) => {
                 </div>
                 <div className={"numberBaloon"}>
                     <Extra price={extra.numberBaloon.price} name={extra.numberBaloon.title} className="btn-number" onAdd={x=>setExtraNumBaloon(x)} currentExtra={extraNumBaloon}/>
+                </div>
+                <div className={"piniata"}>
+                    <Extra price={extra.piñata.price} name={extra.piñata.title} className="btn-number" onAdd={x=>setExtraPricePinata(x)} currentExtra={extraPricePinata}/>
                 </div>
             </>
     )

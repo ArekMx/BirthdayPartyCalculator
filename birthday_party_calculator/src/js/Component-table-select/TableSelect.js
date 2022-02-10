@@ -8,6 +8,7 @@ export const ComponentTableSelect =({numOfkids}) => {
   const [pricePerKid, setPricePerKid] = useState('');
   const [numberOfKids, setNumberOfKids] = useState('7');
   const [minNumSlider, setMinNumSlider] = useState('7');
+  const [total, setTotal] = useState('0');
 
   const showSlider = (price) => {
     if (price === "44") {
@@ -41,6 +42,28 @@ export const ComponentTableSelect =({numOfkids}) => {
   };
 
   numOfkids(numberOfKids, pricePerKid);
+
+  // console.log(pricePerKid);
+  
+  useEffect (()=> {
+
+  if (numberOfKids > 10 && pricePerKid === "38") {
+    setTotal((numberOfKids * pricePerKid) - pricePerKid);
+    if (numberOfKids > 22) {
+      setTotal((numberOfKids * pricePerKid) - pricePerKid*2);
+    }
+  } else if (numberOfKids > 10 && pricePerKid === "42") {
+    setTotal((numberOfKids * pricePerKid) - pricePerKid);
+    if (numberOfKids > 22) {
+      setTotal((numberOfKids * pricePerKid) - pricePerKid*2);
+    }
+  } else {
+    setTotal(numberOfKids * pricePerKid);
+  }
+ 
+  },[numberOfKids, pricePerKid])
+
+  
 
   const minNum = "min.liczba dzieci"
     return (
@@ -76,7 +99,7 @@ export const ComponentTableSelect =({numOfkids}) => {
             </div>
             <div className="count">
               <div className="slider">
-                <h3 className="slider-title">Koszt: {numberOfKids*pricePerKid} zł</h3>
+                <h3 className="slider-title">Koszt: {total} zł</h3>
               </div>     
             </div>     
             </>

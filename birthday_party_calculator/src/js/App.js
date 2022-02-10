@@ -18,8 +18,20 @@ function App() {
 
   const totalAll = (numOfKids, moneyPerKid) => {
 
-    setTotal(numOfKids * moneyPerKid + totalAtractions + totalExtras);
+    let promotion;
 
+    if (numOfKids > 10 && moneyPerKid === "38") {
+        // console.log("weszło 38");
+        promotion = (numOfKids * moneyPerKid) - 38
+        setTotal(promotion + totalAtractions + totalExtras)
+    } else if (numOfKids > 10 && moneyPerKid === "42") {
+        // console.log("weszło 42");
+        promotion = (numOfKids * moneyPerKid) - 42
+        setTotal(promotion + totalAtractions + totalExtras)
+    } else if (moneyPerKid === "45") {
+        // console.log("weszło 45");
+        setTotal(numOfKids * moneyPerKid + totalAtractions + totalExtras);
+    }
   }
 
 
@@ -43,6 +55,7 @@ function App() {
           <h1>{total} zł</h1>
         </div>
       </section>
+      
     </div>
   );
 }

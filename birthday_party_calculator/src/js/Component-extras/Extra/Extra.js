@@ -24,10 +24,6 @@ export const Extra =({price, name, className, onAdd, currentExtra}) => {
             setStyleBtn(true);
             onAdd(event.target.value);
         }
-
-               
-        
-    
     }
 
 
@@ -44,7 +40,11 @@ export const Extra =({price, name, className, onAdd, currentExtra}) => {
                     background: styleBtn ? "olivedrab" : null,
                     boxShadow: styleBtn ? boxShadowStyle : null
                     }}
-                className={className}>{price} zł - {name}</button>
+                className={className}>{price} zł - {name}
+                <span  className={ styleBtn ? "center label__checkbox__checked" : "center label__checkbox"}>
+                    <i className="fa fa-check icon"></i>
+                </span>
+                </button>
             </div>
     )
 }

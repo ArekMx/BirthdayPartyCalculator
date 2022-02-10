@@ -5,6 +5,7 @@
   
   display: inline-block;
   margin: 20px;
+  
   @include shadowBoxes ($olivedrab);
   .assistant {
       @include shadowBoxes ($dark-red);

@@ -54,6 +54,7 @@
     overflow: hidden;
     transition: .3s ease-in-out;
     border-radius: .3rem;
+    padding-right: 50px;
     
     @include box_shadow(5);
     &:hover {

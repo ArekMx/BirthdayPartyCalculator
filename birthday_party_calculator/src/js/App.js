@@ -4,7 +4,8 @@ import React, {useState, useEffect} from "react"
 
 import { ComponentAtractions } from "../js/Component-atractions/ComponentAtractions";
 import { ComponentTableSelect } from "./Component-table-select/TableSelect";
-import { ComponentExtras } from './Component-extras/ComponentExtras'
+import { ComponentExtras } from './Component-extras/ComponentExtras';
+
 
 function App() {
 
@@ -18,20 +19,23 @@ function App() {
 
   const totalAll = (numOfKids, moneyPerKid) => {
 
-    let promotion;
+    let productOfNumPrice = numOfKids * moneyPerKid;
+    let sumOfTotalAtractExtras = totalAtractions + totalExtras;
 
     if (numOfKids > 10 && moneyPerKid === "38") {
-        // console.log("weszło 38");
-        promotion = (numOfKids * moneyPerKid) - 38
-        setTotal(promotion + totalAtractions + totalExtras)
+      setTotal((productOfNumPrice - moneyPerKid) + sumOfTotalAtractExtras);
+      if (numOfKids > 22) {
+        setTotal((productOfNumPrice - moneyPerKid*2) + sumOfTotalAtractExtras);
+      }
     } else if (numOfKids > 10 && moneyPerKid === "42") {
-        // console.log("weszło 42");
-        promotion = (numOfKids * moneyPerKid) - 42
-        setTotal(promotion + totalAtractions + totalExtras)
-    } else if (moneyPerKid === "45") {
-        // console.log("weszło 45");
-        setTotal(numOfKids * moneyPerKid + totalAtractions + totalExtras);
+      setTotal((productOfNumPrice - moneyPerKid) + sumOfTotalAtractExtras);
+      if (numOfKids > 22) {
+        setTotal((productOfNumPrice - moneyPerKid*2) + sumOfTotalAtractExtras);
+      }
+    } else {
+      setTotal(productOfNumPrice + sumOfTotalAtractExtras);
     }
+
   }
 
 

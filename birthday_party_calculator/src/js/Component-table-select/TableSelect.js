@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react"
 import {SelectedPrice} from './SelectedPrice/SelectedPrice';
 import Slider from 'react-smooth-range-input';
 
+import { countTotalTableSelect } from "./functions";
+
 
 export const ComponentTableSelect =({numOfkids}) => {
     
@@ -42,24 +44,10 @@ export const ComponentTableSelect =({numOfkids}) => {
   };
 
   numOfkids(numberOfKids, pricePerKid);
-
-  // console.log(pricePerKid);
   
   useEffect (()=> {
 
-  if (numberOfKids > 10 && pricePerKid === "38") {
-    setTotal((numberOfKids * pricePerKid) - pricePerKid);
-    if (numberOfKids > 22) {
-      setTotal((numberOfKids * pricePerKid) - pricePerKid*2);
-    }
-  } else if (numberOfKids > 10 && pricePerKid === "42") {
-    setTotal((numberOfKids * pricePerKid) - pricePerKid);
-    if (numberOfKids > 22) {
-      setTotal((numberOfKids * pricePerKid) - pricePerKid*2);
-    }
-  } else {
-    setTotal(numberOfKids * pricePerKid);
-  }
+    countTotalTableSelect(numberOfKids, pricePerKid, setTotal);
  
   },[numberOfKids, pricePerKid])
 

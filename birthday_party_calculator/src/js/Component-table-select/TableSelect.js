@@ -47,11 +47,14 @@ export const ComponentTableSelect =({numOfkids}) => {
   
   useEffect (()=> {
 
-    countTotalTableSelect(numberOfKids, pricePerKid, setTotal);
+    countTotalTableSelect(numberOfKids, pricePerKid, setTotal, setInfo, setText);
  
   },[numberOfKids, pricePerKid])
 
   
+  const [info, setInfo] = useState(true);
+  const [text, setText] = useState('')
+
 
   const minNum = "min.liczba dzieci"
     return (
@@ -79,6 +82,9 @@ export const ComponentTableSelect =({numOfkids}) => {
                     </tr>
                 </tbody>
             </table>
+            <div className="info-promotion"> 
+              {info ? <h3>{text}</h3> : null}
+            </div>
             <div className="count">
               <div className="slider">
                 <h3 className="slider-title">Wybierz liczbę dzieci:</h3>

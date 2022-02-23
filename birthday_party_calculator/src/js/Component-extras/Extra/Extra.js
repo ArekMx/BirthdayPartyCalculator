@@ -31,6 +31,7 @@ export const Extra =({price, name, className, onAdd, currentExtra}) => {
     const boxShadowStyle = "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)"
 
     return (
+        <>
             <div>
                 <button
                 value={price}
@@ -41,10 +42,11 @@ export const Extra =({price, name, className, onAdd, currentExtra}) => {
                     boxShadow: styleBtn ? boxShadowStyle : null
                     }}
                 className={className}>{price} zł - {name}
+                </button>
                 <span  className={ styleBtn ? "center label__checkbox__checked" : "center label__checkbox"}>
                     <i className="fa fa-check icon"></i>
                 </span>
-                </button>
             </div>
+        </>
     )
 }

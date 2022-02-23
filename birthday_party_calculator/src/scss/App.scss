@@ -55,10 +55,8 @@
 
 
 .center {
-  position: absolute;
-  top: 50%; 
-  left: 95%;
-  transform: translate(-50%,-50%);
+  position: relative;
+  right: 6%;
 }
 
 .label__checkbox {

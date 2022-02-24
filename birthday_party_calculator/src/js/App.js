@@ -14,23 +14,28 @@ function App() {
 
   const [totalAtractions, setTotalAtractions] = useState('');
   const [totalExtras, setTotalExtras] = useState('');  
-  
-  // console.log(totalExtras);
+  const [extraPriceEkoTableware, setExtraPriceEkoTableware] = useState('');
+
+  // console.log(numOfKids);
+  // console.log(extraPriceEkoTableware);
 
   const totalAll = (numOfKids, moneyPerKid) => {
 
-    let productOfNumPrice = numOfKids * moneyPerKid;
+
+    let costPerKid = Number(moneyPerKid) + Number(extraPriceEkoTableware);
+    let productOfNumPrice = numOfKids * costPerKid;
     let sumOfTotalAtractExtras = totalAtractions + totalExtras;
 
+
     if (numOfKids > 10 && moneyPerKid === "38") {
-      setTotal((productOfNumPrice - moneyPerKid) + sumOfTotalAtractExtras);
+      setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
       if (numOfKids > 22) {
-        setTotal((productOfNumPrice - moneyPerKid*2) + sumOfTotalAtractExtras);
+        setTotal((productOfNumPrice - costPerKid*2) + sumOfTotalAtractExtras);
       }
     } else if (numOfKids > 10 && moneyPerKid === "42") {
-      setTotal((productOfNumPrice - moneyPerKid) + sumOfTotalAtractExtras);
+      setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
       if (numOfKids > 22) {
-        setTotal((productOfNumPrice - moneyPerKid*2) + sumOfTotalAtractExtras);
+        setTotal((productOfNumPrice - costPerKid*2) + sumOfTotalAtractExtras);
       }
     } else {
       setTotal(productOfNumPrice + sumOfTotalAtractExtras);
@@ -48,7 +53,7 @@ function App() {
         <ComponentAtractions onUp={x=>setTotalAtractions(x)}/>
       </section>
       <section className="extras">
-        <ComponentExtras onAddTotalExtras={x=>setTotalExtras(x)}/>
+        <ComponentExtras onAddTotalExtras={x=>setTotalExtras(x)} onAddTableware={x=>setExtraPriceEkoTableware(x)}/>
       </section>
 
       <section className="total">

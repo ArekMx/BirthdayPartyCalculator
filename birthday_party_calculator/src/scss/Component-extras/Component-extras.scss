@@ -30,10 +30,12 @@
       }
   }
   .numberBaloon{
+      display: inline-block;
       @include shadowBoxes ($yellow);
       margin: 20px;
   }
   .piniata{
+    display: inline-block;
     @include shadowBoxes ($yellow);
     margin: 20px;
 }

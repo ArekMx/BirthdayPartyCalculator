@@ -46,13 +46,12 @@ export const ExtraBaloons =({price, name, className, onAdd, currentExtra}) => {
                             border: (parseFloat(currentExtra) === price ? "4px solid #00d478" : "5px solid rgba(0,0,0,0.1)"),
                             color: styleOnClick('white')
                             // opacity: (parseFloat(currentExtra) === price ? "1" : "5px solid rgba(0,0,0,0.1)")
-                        }}
-                >
+                        }}>
                     <i className="fa fa-check icon"
                         style={{
                             backgroundColor: styleOnClick('white')
-                        }}
-                   ></i>
+                    }}>
+                    </i>
                 </span>
             </div>
     )

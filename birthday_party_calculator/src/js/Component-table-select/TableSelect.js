@@ -26,14 +26,24 @@ export const ComponentTableSelect =({numOfkids}) => {
   }, [pricePerKid]);
 
 
-  // Ustaw cenę od poniedziałku do czwartku:
-  const weekPrice = 38;
+  const prices = {
+    week: {
+      price: 38,
+      title: "Od poniedziałku do czwartku",
+      min: '(7 - min.liczba dzieci)'
+    },
+    friday: {
+      price: 42,
+      title: "Piątek",
+      min: '(7 - min.liczba dzieci)'
+    },
+    weekend: {
+      price: 50,
+      title: "Sobota, niedziela i święta",
+      min: '(8 - min.liczba dzieci)'
+    }
+  }
 
-  // Ustaw cenę w piątek:
-  const fridayPrice = 42;
-
-  // Ustaw cenę w wekend:
-  const weekedPrice = 44;
 
   const setBtn = (currentPrice) => {
     setPricePerKid(currentPrice)
@@ -55,30 +65,21 @@ export const ComponentTableSelect =({numOfkids}) => {
   const [info, setInfo] = useState(true);
   const [text, setText] = useState('')
 
-
-  const minNum = "min.liczba dzieci"
     return (
             <>
             <table>
                 <tbody>
                     <tr>
-                        <th>Dni w tygodniu</th>
-                        <th>Wybierz kwotę:</th>
+                        <th>Wybierz dzień tygodnia:</th>
                     </tr>
                     <tr>
-                        <th className={'cell'}>Poniedziałek - czwartek</th>
-                        <th><SelectedPrice price={weekPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                        <th>7-{minNum}</th>
+                        <th><SelectedPrice price={prices.week.price} title={prices.week.title} min={prices.week.min} onAdd={setBtn} currentPrice={pricePerKid}/></th>
                     </tr>
                     <tr>
-                        <th>piątek</th>
-                        <th><SelectedPrice price={fridayPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                        <th>7-{minNum}</th>
+                        <th><SelectedPrice price={prices.friday.price} title={prices.friday.title} min={prices.friday.min} onAdd={setBtn} currentPrice={pricePerKid}/></th>
                     </tr>
                     <tr>
-                        <th>sobota, niedziela i święta</th>
-                        <th><SelectedPrice price={weekedPrice} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                        <th>8-{minNum}</th>
+                        <th><SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid}/></th>
                     </tr>
                 </tbody>
             </table>

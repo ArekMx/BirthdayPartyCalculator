@@ -2,7 +2,7 @@ import { Extra } from './Extra/Extra'
 import { ExtraBaloons } from './Extra-baloons/ExtraBaloons';
 import React, {useState, useEffect} from "react"
 
-export const ComponentExtras =({onAddTotalExtras}) => {
+export const ComponentExtras =({onAddTotalExtras, onAddTableware}) => {
     
 
     const extra = {
@@ -31,6 +31,10 @@ export const ComponentExtras =({onAddTotalExtras}) => {
         piñata: {
             price: 100,
             title: "Piniata"
+        },
+        ekoTableware: {
+            price: 2,
+            title: "Zastawa eko - 2 zł/szt"
         }
 
     }
@@ -39,6 +43,7 @@ export const ComponentExtras =({onAddTotalExtras}) => {
     const [extraNumBaloon, setExtraNumBaloon] = useState('');
     const [extraPriceBaloons, setExtraPriceBaloons] = useState('');
     const [extraPricePinata, setExtraPricePinata] = useState('');
+    const [extraPriceEkoTableware, setExtraPriceEkoTableware] = useState('');
     
     const [totalExtras, setTotalExtras] = useState('');
 
@@ -46,9 +51,10 @@ export const ComponentExtras =({onAddTotalExtras}) => {
 
         setTotalExtras(Number(extraPriceAssistant) + Number(extraNumBaloon) + Number(extraPriceBaloons) + Number(extraPricePinata));
 
-    },[extraPriceAssistant, extraNumBaloon, extraPriceBaloons, extraPricePinata]);
+    },[extraPriceAssistant, extraNumBaloon, extraPriceBaloons, extraPricePinata, extraPriceEkoTableware]);
 
     onAddTotalExtras(totalExtras);
+    onAddTableware(extraPriceEkoTableware);
 
     return (
             <>
@@ -74,6 +80,9 @@ export const ComponentExtras =({onAddTotalExtras}) => {
                 </div>
                 <div className={"piniata"}>
                     <Extra price={extra.piñata.price} name={extra.piñata.title} className="btn-number" onAdd={x=>setExtraPricePinata(x)} currentExtra={extraPricePinata}/>
+                </div>
+                <div className={"piniata"}>
+                    <Extra price={extra.ekoTableware.price} name={extra.ekoTableware.title} className="btn-number" onAdd={x=>setExtraPriceEkoTableware(x)} currentExtra={extraPriceEkoTableware}/>
                 </div>
             </>
     )

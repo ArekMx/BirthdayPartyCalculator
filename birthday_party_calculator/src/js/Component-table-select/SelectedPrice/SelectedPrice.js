@@ -1,6 +1,6 @@
 
 
-export const SelectedPrice =({price, onAdd, currentPrice}) => {
+export const SelectedPrice =({price, title, min, onAdd, currentPrice}) => {
     
     const styleOnClick =(x) =>{
         return parseFloat(currentPrice) === price ? x : null
@@ -21,7 +21,7 @@ export const SelectedPrice =({price, onAdd, currentPrice}) => {
                     }}
                 className={
                     "button"
-                }>{price} zł</button>
+                }> {title} - {price}zł<br></br>{min}</button>
             </div>
     )
 }

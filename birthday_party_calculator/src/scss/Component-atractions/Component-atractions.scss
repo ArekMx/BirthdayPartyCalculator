@@ -3,22 +3,28 @@
 
 
 .atractions {
-    margin: 50px 20px;
-    padding: 30px;
+    margin-top: 1rem;
     @include shadowBoxes($dark-green);
-    .slider-title {
+    .sliders-title {
+        display: inline-block;
+        // margin: 1rem;
         color: coral;
+        font-size: 2rem;
+        padding: 0 .5rem ;
+
+    
     }
     .sliders {
         @include displayFlex(space-between);
         flex-wrap: wrap;
         text-align: center;
+        
         .atractions-slider {
-            width: 200px;
+            width: 250px;
             height: 100px;
-            margin: 10px;
             letter-spacing: 1;
             align-items: center;
+            margin: 2rem;
             .pigtails {
                 color: $light-green;
             }
@@ -33,9 +39,11 @@
             }
             .atractions-title {
                 display: inline-block;
-                letter-spacing: 1;
+                margin: .25rem;
+                font-size: 2rem;
             }
         }
+        
     }
     .total-atractions {
         display: inline-block;

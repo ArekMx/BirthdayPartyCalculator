@@ -42,7 +42,7 @@ export const ComponentAtractions =({onUp}) => {
     return (
         <>
         <div className="atractions">
-            <h1 className="slider-title">Ustaw ilość dzieci, które skorzystają z poniższych atrakcji (płatne od dziecka):</h1>
+            <h1 className="sliders-title">Ustaw ilość dzieci, które skorzystają z poniższych atrakcji (płatne od dziecka):</h1>
             <div className="sliders">
             <div className="atractions-slider">
                 <h1 className="atractions-title pigtails">Warkoczyki - 12 zł </h1>
@@ -54,7 +54,7 @@ export const ComponentAtractions =({onUp}) => {
                 <Slider value={0} min={0} max={30} onChange={(x) => setFacePainting(x)} />
             </div>
             <div className="atractions-slider">
-                <h1 className="slider-title tatoos">Tatuaże - 8 zł</h1>
+                <h1 className="atractions-title tatoos">Tatuaże - 8 zł</h1>
                 <Slider value={0} min={0} max={30} onChange={(x) => setTatoos(x)} />
             </div>
             <div className="atractions-slider">
@@ -62,9 +62,9 @@ export const ComponentAtractions =({onUp}) => {
                 <Slider value={0} min={0} max={30} onChange={(x) => setBaloons(x)} />
             </div>
             </div>
-            <div className="total-atractions">
+            {/* <div className="total-atractions">
                 <h1> Cena za atrakcje: {totalAtractions} zł</h1>
-            </div> 
+            </div>  */}
         </div> 
         </>
     )

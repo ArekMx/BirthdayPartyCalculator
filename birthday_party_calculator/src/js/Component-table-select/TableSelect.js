@@ -84,16 +84,18 @@ export const ComponentTableSelect =({numOfkids}) => {
                 </tbody>
             </table>
             <div className="count">
-              <div className="slider">
+              <div>
                 <p className="slider-title">Wybierz liczbę dzieci:</p>
+              </div>
+              <div className="slider">
                 <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids}/>
               </div>     
             </div>
-            <div className="count">
+            {/* <div className="count">
               <div className="slider">
                 <h3 className="slider-title">Koszt: {total} zł</h3>
               </div>     
-            </div>
+            </div> */}
             <div className="info-promotion"> 
               {info ? <h3>{text}</h3> : null}
             </div>     

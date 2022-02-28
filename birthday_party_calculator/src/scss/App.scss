@@ -21,15 +21,18 @@
   }
 
   .count {
-    .slider {
-      width: 85%;
-      margin: 1rem 0;
-      // @include marginBoxes;
-      .slider-title {
+    width: 90%;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    .slider-title {
         color: $yellow;
         font-size: 2rem;
         margin: .5rem;
       }
+    .slider {
+      width: 85%;
+      margin: 0 1rem;
     }
     @include displayFlex(center);
     @include shadowBoxes($indigo);

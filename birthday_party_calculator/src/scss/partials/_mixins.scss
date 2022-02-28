@@ -8,7 +8,7 @@
 }
 
 @mixin marginBoxes {
-    margin: 20px;
+    margin: .5rem;
 }
 
 @mixin displayFlex($justify-content) {
@@ -40,7 +40,7 @@
     border: none;
     outline: none;
     padding: .5rem 1.7rem;
-    margin: 1.5rem;
+    margin: .5rem;
     text-align: center;
     display: inline-block;
     font-size: 1.3rem;
@@ -54,7 +54,6 @@
     overflow: hidden;
     transition: .3s ease-in-out;
     border-radius: .3rem;
-    padding-right: 50px;
     
     @include box_shadow(5);
     &:hover {

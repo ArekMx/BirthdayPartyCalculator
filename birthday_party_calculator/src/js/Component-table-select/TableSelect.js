@@ -38,7 +38,7 @@ export const ComponentTableSelect =({numOfkids}) => {
       min: '(7 - min.liczba dzieci)'
     },
     weekend: {
-      price: 50,
+      price: 45,
       title: "Sobota, niedziela i święta",
       min: '(8 - min.liczba dzieci)'
     }
@@ -70,7 +70,7 @@ export const ComponentTableSelect =({numOfkids}) => {
             <table>
                 <tbody>
                     <tr>
-                        <th>Wybierz dzień tygodnia:</th>
+                        <th><p className="title-header">Wybierz dzień tygodnia:</p></th>
                     </tr>
                     <tr>
                         <th><SelectedPrice price={prices.week.price} title={prices.week.title} min={prices.week.min} onAdd={setBtn} currentPrice={pricePerKid}/></th>
@@ -83,19 +83,19 @@ export const ComponentTableSelect =({numOfkids}) => {
                     </tr>
                 </tbody>
             </table>
-            <div className="info-promotion"> 
-              {info ? <h3>{text}</h3> : null}
-            </div>
             <div className="count">
               <div className="slider">
-                <h3 className="slider-title">Wybierz liczbę dzieci:</h3>
-                <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids} />
+                <p className="slider-title">Wybierz liczbę dzieci:</p>
+                <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids}/>
               </div>     
             </div>
             <div className="count">
               <div className="slider">
                 <h3 className="slider-title">Koszt: {total} zł</h3>
               </div>     
+            </div>
+            <div className="info-promotion"> 
+              {info ? <h3>{text}</h3> : null}
             </div>     
             </>
     )

@@ -1,17 +1,17 @@
 @import './partials/mixins';
 @import './partials/colors';
+@import './partials/root';
 
 .App {
   text-align: center;
   .App-header {
     @include displayFlex(center);
     flex-wrap: wrap;
-    font-size: calc(10px + 2vmin);
     color: $dark-red;
     @include shadowBoxes ($green);
-    @include marginBoxes;
-    th {
-      padding: 5px;
+    .title-header {
+      font-size: 2rem;
+      margin: .5rem;
     }
   }
 
@@ -23,10 +23,12 @@
   .count {
     .slider {
       width: 85%;
-      @include marginBoxes;
+      margin: 1rem 0;
+      // @include marginBoxes;
       .slider-title {
         color: $yellow;
-        // font-size: 30px;
+        font-size: 2rem;
+        margin: .5rem;
       }
     }
     @include displayFlex(center);

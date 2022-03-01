@@ -38,7 +38,7 @@ export const ExtraBaloons =({price, name, className, onAdd, currentExtra}) => {
                     transform: styleOnClick("none"),
                     boxShadow: styleOnClick(boxShadowStyle)
                 }}
-                className={className}>{price} zł - {name}
+                className={className}>{name} - {price}zł  
                 </button>
                 <span  className="center label__checkbox"
                         style={{

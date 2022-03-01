@@ -2,16 +2,20 @@
 @import '../partials/mixins';
 
 .extras {
-  display: inline-block;
   margin: 1rem 0;
-  
   @include shadowBoxes ($orange-pastel);
-  .assistant {
-      margin: 2rem
-  }
+
   .extras-title {
     font-size: 2rem;
     color: $green-pastel;
+  }
+
+  .assistant,
+  .numberBaloon,
+  .piniata,
+  .ekoTableware {
+    display: inline-block;
+    margin: 1rem
   }
 
   .bouquet {
@@ -34,14 +38,7 @@
         }
       }
   }
-  .numberBaloon{
-      display: inline-block;
-      margin: 1rem
-  }
-  .piniata{
-    display: inline-block;
-    margin: 1rem
-}
+  
 }
 
 .btn-assistant {

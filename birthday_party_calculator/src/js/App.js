@@ -30,12 +30,12 @@ function App() {
 
     if (numOfKids > 10 && moneyPerKid === "38") {
       setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
-      if (numOfKids > 22) {
+      if (numOfKids > 21) {
         setTotal((productOfNumPrice - costPerKid*2) + sumOfTotalAtractExtras);
       }
     } else if (numOfKids > 10 && moneyPerKid === "42") {
       setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
-      if (numOfKids > 22) {
+      if (numOfKids > 21) {
         setTotal((productOfNumPrice - costPerKid*2) + sumOfTotalAtractExtras);
       }
     } else {

@@ -30,17 +30,17 @@ export const ComponentTableSelect =({numOfkids}) => {
     week: {
       price: 38,
       title: "Od poniedziałku do czwartku",
-      min: '(7 - min.liczba dzieci)'
+      min: '( 7 - min. liczba dzieci )'
     },
     friday: {
       price: 42,
       title: "Piątek",
-      min: '(7 - min.liczba dzieci)'
+      min: '( 7 - min. liczba dzieci )'
     },
     weekend: {
       price: 45,
       title: "Sobota, niedziela i święta",
-      min: '(8 - min.liczba dzieci)'
+      min: '( 8 - min. liczba dzieci )'
     }
   }
 

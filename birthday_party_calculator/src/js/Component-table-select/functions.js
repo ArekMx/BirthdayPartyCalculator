@@ -9,7 +9,7 @@ export const countTotalTableSelect= (numberOfKids, pricePerKid, setTotal, setInf
         setTotal((numberOfKids * pricePerKid) - pricePerKid);
         setInfo(true);
         setText("Jubilat gratis! Nie płacisz za 1 dziecko!");
-        if (numberOfKids > 22) {
+        if (numberOfKids > 21) {
           setTotal((numberOfKids * pricePerKid) - pricePerKid*2);
           setText("Jubilat i Gość gratis! Nie płacisz za 2 dzieci!");
         }
@@ -17,7 +17,7 @@ export const countTotalTableSelect= (numberOfKids, pricePerKid, setTotal, setInf
         setTotal((numberOfKids * pricePerKid) - pricePerKid);
         setInfo(true);
         setText("Jubilat gratis! Nie płacisz za 1 dziecko!");
-        if (numberOfKids > 22) {
+        if (numberOfKids > 21) {
           setTotal((numberOfKids * pricePerKid) - pricePerKid*2);
           setText("Jubilat i Gość gratis! Nie płacisz za 2 dzieci!");
         }

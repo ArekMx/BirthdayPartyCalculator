@@ -97,7 +97,7 @@ export const ComponentTableSelect =({numOfkids}) => {
               </div>     
             </div> */}
             <div className="info-promotion"> 
-              {info ? <h3>{text}</h3> : null}
+              {info ? <h3 className="info-promotion-text">{text}</h3> : null}
             </div>     
             </>
     )

@@ -8,6 +8,10 @@
     @include displayFlex(center);
     flex-wrap: wrap;
     color: $dark-red;
+    background-image: url("../images/wallpaper_gold.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    // @include wallPaperBoxes((url("../images/wallpaper_gold.svg")));
     @include shadowBoxes ($green);
     .title-header {
       font-size: 2rem;

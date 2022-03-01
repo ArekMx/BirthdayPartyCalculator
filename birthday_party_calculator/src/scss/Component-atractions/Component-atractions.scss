@@ -4,6 +4,9 @@
 
 .atractions {
     margin-top: 1rem;
+    // background-image: url("../images/wallpaper_green.svg");
+    // background-size: cover;
+    // background-repeat: no-repeat;
     @include shadowBoxes($dark-green);
     .sliders-title {
         display: inline-block;

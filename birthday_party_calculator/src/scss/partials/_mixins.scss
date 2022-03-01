@@ -17,6 +17,12 @@
     justify-content: $justify-content;
 }
 
+@mixin wallPaperBoxes ($path) {
+    background-image: $path;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
 
 @mixin box_shadow ($level) {
     @if $level == 0 {

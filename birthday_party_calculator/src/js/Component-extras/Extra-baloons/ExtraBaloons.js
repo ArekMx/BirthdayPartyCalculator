@@ -42,8 +42,8 @@ export const ExtraBaloons =({price, name, className, onAdd, currentExtra}) => {
                 </button>
                 <span  className="center label__checkbox"
                         style={{
-                            backgroundColor: (parseFloat(currentExtra) === price ? "#00d478" : "white"),
-                            border: (parseFloat(currentExtra) === price ? "4px solid #00d478" : "5px solid rgba(0,0,0,0.1)"),
+                            backgroundColor: (parseFloat(currentExtra) === price ? "#8600d4" : "white"),
+                            border: (parseFloat(currentExtra) === price ? "4px solid #8600d4" : "5px solid rgba(0,0,0,0.1)"),
                             color: styleOnClick('white')
                             // opacity: (parseFloat(currentExtra) === price ? "1" : "5px solid rgba(0,0,0,0.1)")
                         }}>

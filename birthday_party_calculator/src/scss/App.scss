@@ -12,8 +12,11 @@
     .title-header {
       font-size: 2rem;
       margin: .5rem;
+      color: $gold;
     }
   }
+
+  
 
   .info-promotion {
      position: relative;
@@ -35,23 +38,21 @@
       margin: 0 1rem;
     }
     @include displayFlex(center);
-    @include shadowBoxes($indigo);
+    @include shadowBoxes($purple);
     @include marginBoxes;
   }
 
   .total {
     margin: auto;
-    padding: 10px;
+    padding: .5rem;
+    font-size: 1.5rem;
     max-width: 600px;
-    color: $purple;
+    color: $gold-dark;
     flex-wrap: no-wrap;
     position: sticky;
     bottom: 0;
     @include displayFlex(space-between);
-    @include shadowBoxes($orange-pastel);
-    // .total__text{
-    //   color: $fuchsia;
-    // }
+    @include shadowBoxes($D);
     .total__price {
       width: 100px;
     }
@@ -61,7 +62,7 @@
 
 .center {
   position: relative;
-  right: 6%;
+  top: -px;
 }
 
 .label__checkbox {

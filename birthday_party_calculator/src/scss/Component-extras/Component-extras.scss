@@ -2,42 +2,45 @@
 @import '../partials/mixins';
 
 .extras {
-  
   display: inline-block;
-  margin: 20px;
+  margin: 1rem 0;
   
-  @include shadowBoxes ($olivedrab);
+  @include shadowBoxes ($orange-pastel);
   .assistant {
-      @include shadowBoxes ($dark-red);
-      margin: 20px;
+      margin: 2rem
   }
+  .extras-title {
+    font-size: 2rem;
+    color: $green-pastel;
+  }
+
   .bouquet {
     margin: 20px;
     text-align: center;
-      @include shadowBoxes ($orange-pastel);
+      @include shadowBoxes ($green);
       .bouquet-title {
-        font-size: 30px;
+        font-size: 2rem;
         color: $dark-green;
+        display: inline-block;
+        margin: .5rem;
       }
       .bouquet-btns {
         @include displayFlex(space-between);
         text-align: center;
         flex-wrap: wrap;
-        margin: 20px;
+        // margin: 20px;
         .btn-bouquet {
-          margin: 10px;
+          margin: 1rem
         }
       }
   }
   .numberBaloon{
       display: inline-block;
-      @include shadowBoxes ($yellow);
-      margin: 20px;
+      margin: 1rem
   }
   .piniata{
     display: inline-block;
-    @include shadowBoxes ($yellow);
-    margin: 20px;
+    margin: 1rem
 }
 }
 

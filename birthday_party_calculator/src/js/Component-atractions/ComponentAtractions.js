@@ -45,7 +45,7 @@ export const ComponentAtractions =({onUp}) => {
             <h1 className="sliders-title">Ustaw ilość dzieci, które skorzystają z poniższych atrakcji (płatne od dziecka):</h1>
             <div className="sliders">
             <div className="atractions-slider">
-                <h1 className="atractions-title pigtails">Warkoczyki - 12 zł </h1>
+                <h1 className="atractions-title pigtails">Zaplatanie warkoczyków - 12 zł </h1>
                 <Slider value={0} min={0} max={30} onChange={(x) => setPigtails(x)} />
                 {/* <button onClick={()=>{setPigtails(''); setPigtailsMin(0); console.log(pigtailsMin);}}>reset</button> */}
             </div>
@@ -58,7 +58,7 @@ export const ComponentAtractions =({onUp}) => {
                 <Slider value={0} min={0} max={30} onChange={(x) => setTatoos(x)} />
             </div>
             <div className="atractions-slider">
-                <h1 className="atractions-title baloons">Balonik modelowany (figurka zoo) - 4 zł</h1>
+                <h1 className="atractions-title baloons">Balonik modelowany - 4 zł</h1>
                 <Slider value={0} min={0} max={30} onChange={(x) => setBaloons(x)} />
             </div>
             </div>

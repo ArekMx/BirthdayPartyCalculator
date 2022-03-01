@@ -7,12 +7,8 @@
     @include shadowBoxes($dark-green);
     .sliders-title {
         display: inline-block;
-        // margin: 1rem;
         color: coral;
         font-size: 2rem;
-        padding: 0 .5rem ;
-
-    
     }
     .sliders {
         @include displayFlex(space-between);
@@ -21,10 +17,9 @@
         
         .atractions-slider {
             width: 250px;
-            height: 100px;
             letter-spacing: 1;
             align-items: center;
-            margin: 2rem;
+            margin: 1rem;
             .pigtails {
                 color: $light-green;
             }

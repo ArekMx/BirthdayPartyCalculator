@@ -27,6 +27,7 @@ function App() {
     let sumOfTotalAtractExtras = totalAtractions + totalExtras;
 
 
+
     if (numOfKids > 10 && moneyPerKid === "38") {
       setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
       if (numOfKids > 22) {

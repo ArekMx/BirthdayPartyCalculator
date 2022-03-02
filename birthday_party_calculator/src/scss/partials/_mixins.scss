@@ -11,6 +11,14 @@
     margin: 1rem;
 }
 
+@mixin titleBoxes {
+    display: inline-block;
+    margin: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: $blue;
+    text-shadow: $white 0.1em 0.1em 0.2em;
+}
 @mixin displayFlex($justify-content) {
     display: flex;
     align-items: center;
@@ -21,7 +29,6 @@
     background-image: $path;
     background-size: cover;
     background-repeat: no-repeat;
-    
 }
 
 @mixin box_shadow ($level) {

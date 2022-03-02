@@ -67,29 +67,28 @@ export const ComponentTableSelect =({numOfkids}) => {
 
     return (
             <>
-            <table>
-                <tbody>
-                    <tr>
-                        <th><p className="title-header">Wybierz dzień tygodnia:</p></th>
-                    </tr>
-                    <tr>
-                        <th><SelectedPrice price={prices.week.price} title={prices.week.title} min={prices.week.min} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                    </tr>
-                    <tr>
-                        <th><SelectedPrice price={prices.friday.price} title={prices.friday.title} min={prices.friday.min} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                    </tr>
-                    <tr>
-                        <th><SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid}/></th>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+              <p className="title-header">Wybierz dzień tygodnia:</p>
+            </div>
+            <div>
+              <div>
+              <SelectedPrice price={prices.week.price} title={prices.week.title} min={prices.week.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+            </div>
+            <div>
+              <SelectedPrice price={prices.friday.price} title={prices.friday.title} min={prices.friday.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+            </div>
+            <div>
+              <SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+            </div>
+            </div>
+            
             <div className="count">
               <div>
                 <p className="slider-title">Wybierz liczbę dzieci:</p>
               </div>
               <div className="slider">
                 <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids}/>
-              </div>     
+              </div>      
             </div>
             {/* <div className="count">
               <div className="slider">

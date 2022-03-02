@@ -14,28 +14,23 @@
     // @include wallPaperBoxes((url("../images/wallpaper_gold.svg")));
     @include shadowBoxes ($green);
     .title-header {
-      font-size: 2rem;
-      margin: .5rem;
-      color: $gold;
+      @include titleBoxes;
     }
   }
 
-  
-
   .info-promotion {
      position: relative;
-     font-size: 2rem;
+     font-size: 3rem;
      color: $purple; 
   }
 
   .count {
     width: 90%;
     font-size: 2rem;
-    font-weight: bold;
     margin: 1rem 0;
     .slider-title {
         color: $yellow;
-        font-size: 2rem;
+        font-size: 3rem;
         margin: 1rem;
       }
     .slider {

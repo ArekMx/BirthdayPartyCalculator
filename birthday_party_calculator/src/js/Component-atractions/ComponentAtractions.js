@@ -42,7 +42,7 @@ export const ComponentAtractions =({onUp}) => {
     return (
         <>
         <div className="atractions">
-            <h1 className="sliders-title">Ustaw ilość dzieci, które skorzystają z poniższych atrakcji (płatne od dziecka):</h1>
+            <p className="sliders-title">Ustaw ilość dzieci, które skorzystają z poniższych atrakcji <br></br>(płatne od dziecka):</p>
             <div className="sliders">
             <div className="atractions-slider">
                 <h1 className="atractions-title pigtails">Zaplatanie warkoczyków - 12 zł </h1>

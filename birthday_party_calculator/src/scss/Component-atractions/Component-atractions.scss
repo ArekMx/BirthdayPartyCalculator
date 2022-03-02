@@ -9,25 +9,21 @@
     background-repeat: no-repeat;
     @include shadowBoxes($dark-green);
     .sliders-title {
-        display: inline-block;
-        color: coral;
-        font-size: 2rem;
-        margin: 1rem;
+        @include titleBoxes;
     }
     .sliders {
-        @include displayFlex(space-between);
+        @include displayFlex(center);
         flex-wrap: wrap;
         text-align: center;
-        margin-right: 3rem;
         
         .atractions-slider {
             width: 250px;
             letter-spacing: 1;
             align-items: center;
             margin: 5px;
-            margin-left: 40px;
             background-color: rgba(0, 95, 204, 0.795);
             border-radius: 2rem;
+            // color: $orange;
             .pigtails {
                 color: $light-green;
             }

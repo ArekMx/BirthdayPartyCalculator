@@ -81,7 +81,9 @@ export const ComponentTableSelect =({numOfkids}) => {
               <SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid}/>
             </div>
             </div>
-            
+            <div className="info-promotion"> 
+              {info ? <h3 className="info-promotion-text">{text}</h3> : null}
+            </div> 
             <div className="count">
               <div>
                 <p className="slider-title">Wybierz liczbę dzieci:</p>
@@ -94,10 +96,7 @@ export const ComponentTableSelect =({numOfkids}) => {
               <div className="slider">
                 <h3 className="slider-title">Koszt: {total} zł</h3>
               </div>     
-            </div> */}
-            <div className="info-promotion"> 
-              {info ? <h3 className="info-promotion-text">{text}</h3> : null}
-            </div>     
+            </div> */}    
             </>
     )
 }

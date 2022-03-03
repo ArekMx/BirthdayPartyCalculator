@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./React App_files/font-awesome.min.css">
+    <title>React App</title>
+  <style>@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);</style><style>@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);</style><style>/* --- Imports from app --- */
+:root {
+  font-size: 10px;
+  font-family: 'Lobster', cursive;
+  letter-spacing: .25rem; }
+
+.App {
+  text-align: center; }
+  .App .logos {
+    display: flex;
+    margin-bottom: 15px; }
+    .App .logos .logo {
+      width: 40%; }
+      @media (min-width: 1500px) {
+        .App .logos .logo {
+          width: 15%;
+          position: absolute;
+          left: 2%;
+          top: 5%; } }
+    .App .logos .calculator {
+      width: 50%;
+      margin-left: 30px; }
+      @media (min-width: 1500px) {
+        .App .logos .calculator {
+          width: 15%;
+          position: absolute;
+          left: 2%;
+          top: 20%; } }
+  .App .App-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #ac1717ce;
+    background-image: url(/static/media/wallpaper_gold.306075e3.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 3px 8px 4px #58a9ff;
+    border-radius: 20px;
+    background-color: #00de00; }
+    .App .App-header .title-header {
+      display: inline-block;
+      margin: 20px;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #007bff;
+      text-shadow: #ffffff 0.1em 0.1em 0.2em; }
+  .App .info-promotion {
+    position: relative; }
+    .App .info-promotion .info-promotion-text {
+      font-size: 2rem;
+      color: purple;
+      margin: 10px; }
+  .App .count {
+    width: 90%;
+    font-size: 2rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px 4px #58a9ff;
+    border-radius: 20px;
+    background-color: rgba(162, 0, 255, 0.7);
+    margin: 1rem; }
+    .App .count .slider-title {
+      color: yellow;
+      font-size: 3rem;
+      margin: 1rem; }
+    .App .count .slider {
+      width: 85%;
+      margin: 0 1rem; }
+  .App .total {
+    margin: auto;
+    padding: .5rem;
+    font-size: 1.5rem;
+    max-width: 600px;
+    color: #e2d300;
+    flex-wrap: no-wrap;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 8px 4px #58a9ff;
+    border-radius: 20px;
+    background-color: #285ae4; }
+    .App .total .total__price {
+      width: 100px; }
+
+.center {
+  position: relative;
+  top: -px; }
+
+.label__checkbox {
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: border .3s ease; }
+  .label__checkbox i.icon {
+    opacity: 0.2;
+    transition: opacity .3s .1s ease;
+    -webkit-text-stroke: 3px rgba(0, 0, 0, 0.5); }
+  .label__checkbox:hover {
+    border: 5px solid rgba(0, 0, 0, 0.2); }
+
+.label__checkbox__checked {
+  width: 1em;
+  height: 1em;
+  background: #00d478;
+  border: 4px solid #00d478;
+  opacity: 1;
+  border-radius: 50%; }
+
+.button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  margin: .5rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  position: relative;
+  will-change: transform;
+  letter-spacing: .05rem;
+  position: relative;
+  background: #ffffff;
+  color: #670067;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  border-radius: .5rem;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  .button:hover {
+    color: yellow;
+    background-color: purple; }
+
+.atractions {
+  margin-top: 1rem;
+  background-image: url(/static/media/wallpaper_gold.306075e3.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 3px 8px 4px #58a9ff;
+  border-radius: 20px;
+  background-color: #006300; }
+  .atractions .sliders-title {
+    display: inline-block;
+    margin: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: #ffffff 0.1em 0.1em 0.2em; }
+  .atractions .sliders {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-bottom: 15px; }
+    .atractions .sliders .atractions-slider {
+      width: 250px;
+      letter-spacing: 1;
+      align-items: center;
+      margin: 5px;
+      box-shadow: 0 3px 8px 4px #58a9ff;
+      border-radius: 20px;
+      background-color: rgba(162, 0, 255, 0.7);
+      border-radius: 2rem; }
+      .atractions .sliders .atractions-slider .pigtails {
+        color: #38e2ee; }
+      .atractions .sliders .atractions-slider .face-painting {
+        color: #ff00ff; }
+      .atractions .sliders .atractions-slider .tatoos {
+        color: #fd3500; }
+      .atractions .sliders .atractions-slider .baloons {
+        color: #00de00; }
+      .atractions .sliders .atractions-slider .atractions-title {
+        display: inline-block;
+        margin: .25rem;
+        font-size: 2rem; }
+  .atractions .total-atractions {
+    display: inline-block;
+    margin: 5rem 0;
+    color: #fff901; }
+
+.extras {
+  margin: 1rem 0;
+  box-shadow: 0 3px 8px 4px #58a9ff;
+  border-radius: 20px;
+  background-color: #e7aa25;
+  background-image: url(/static/media/wallpaper_gold.306075e3.svg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .extras .extras-title {
+    display: inline-block;
+    margin: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: #ffffff 0.1em 0.1em 0.2em;
+    width: 90%; }
+  .extras .assistant,
+  .extras .numberBaloon,
+  .extras .piniata,
+  .extras .ekoTableware {
+    display: inline-block;
+    margin: 1rem; }
+  .extras .bouquet {
+    position: relative;
+    width: 80%;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 3px 8px 4px #58a9ff;
+    border-radius: 20px;
+    background-color: rgba(162, 0, 255, 0.7); }
+    .extras .bouquet .bouquet-title {
+      display: inline-block;
+      margin: 20px;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #007bff;
+      text-shadow: #ffffff 0.1em 0.1em 0.2em; }
+    .extras .bouquet .bouquet-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap; }
+      .extras .bouquet .bouquet-btns .btn-bouquet {
+        margin: 1rem; }
+
+.btn-assistant {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  margin: .5rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  position: relative;
+  will-change: transform;
+  letter-spacing: .05rem;
+  position: relative;
+  background: #ffffff;
+  color: #6b8e23;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  border-radius: .5rem;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  .btn-assistant:hover {
+    color: yellow;
+    background-color: #6b8e23; }
+
+.btn-baloons {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  margin: .5rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  position: relative;
+  will-change: transform;
+  letter-spacing: .05rem;
+  position: relative;
+  background: #ffffff;
+  color: #285ae4;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  border-radius: .5rem;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  .btn-baloons:hover {
+    color: yellow;
+    background-color: #285ae4; }
+
+.btn-number {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  margin: .5rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  position: relative;
+  will-change: transform;
+  letter-spacing: .05rem;
+  position: relative;
+  background: #ffffff;
+  color: #6b8e23;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  border-radius: .5rem;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  .btn-number:hover {
+    color: yellow;
+    background-color: #6b8e23; }
+
+.btn-pinata {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  margin: .5rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  position: relative;
+  will-change: transform;
+  letter-spacing: .05rem;
+  position: relative;
+  background: #ffffff;
+  color: #6b8e23;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  border-radius: .5rem;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  .btn-pinata:hover {
+    color: yellow;
+    background-color: #6b8e23; }
+
+/* --- Imports from partials here --- */
+:root {
+  font-size: 10px;
+  font-family: 'Lobster', cursive;
+  letter-spacing: .25rem; }
+
+body {
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #007bff; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvbWFpbi5zY3NzIiwid2VicGFjazovL3NyYy9zY3NzL3BhcnRpYWxzL19yb290LnNjc3MiLCJ3ZWJwYWNrOi8vc3JjL3Njc3MvQXBwLnNjc3MiLCJ3ZWJwYWNrOi8vc3JjL3Njc3MvcGFydGlhbHMvX21peGlucy5zY3NzIiwid2VicGFjazovL3NyYy9zY3NzL3BhcnRpYWxzL19jb2xvcnMuc2NzcyIsIndlYnBhY2s6Ly9zcmMvc2Nzcy9TZWxlY3RlZFByaWNlL1NlbGVjdGVkUHJpY2Uuc2NzcyIsIndlYnBhY2s6Ly9zcmMvc2Nzcy9Db21wb25lbnQtYXRyYWN0aW9ucy9Db21wb25lbnQtYXRyYWN0aW9ucy5zY3NzIiwid2VicGFjazovL3NyYy9zY3NzL0NvbXBvbmVudC1leHRyYXMvQ29tcG9uZW50LWV4dHJhcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDZCQUFBO0FDRUE7RUFDSSxlQUFlO0VBQ2YsK0JBQStCO0VBQy9CLHNCQUFzQixFQUFBOztBQ0QxQjtFQUNFLGtCQUFrQixFQUFBO0VBRHBCO0lBS0ksYUFBYTtJQUNiLG1CQUFtQixFQUFBO0lBTnZCO01BUUksVUFBVSxFQUFBO01DUlY7UURBSjtVQVVNLFVBQVU7VUFDVixrQkFBa0I7VUFDbEIsUUFBUTtVQUNSLE9BQU8sRUFBQSxFQUVSO0lBZkw7TUFpQk0sVUFBVTtNQUNWLGlCQUFpQixFQUFBO01DbEJuQjtRREFKO1VBb0JRLFVBQVU7VUFDVixrQkFBa0I7VUFDbEIsUUFBUTtVQUNSLFFBQVEsRUFBQSxFQUVWO0VBekJOO0lDd0JJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJESTJCO0lBQzNCLGVBQWU7SUFDZixnQkV0QmdCO0lGdUJoQix5REFBcUQ7SUFDckQsc0JBQXNCO0lBQ3RCLDRCQUE0QjtJQzdCNUIsaUNDSGM7SURJZCxtQkFBbUI7SUFDbkIseUJDVFcsRUFBQTtJRkNmO01DZ0JJLHFCQUFxQjtNQUNyQixZQUFZO01BQ1osZUFBZTtNQUNmLGlCQUFpQjtNQUNqQixjQ2xCVTtNRG1CVixzQ0FBcUMsRUFBQTtFRHJCekM7SUE0Q0ssa0JBQWtCLEVBQUE7SUE1Q3ZCO01BOENNLGVBQWU7TUFDZixhRXBDbUI7TUZxQ25CLFlBQVksRUFBQTtFQWhEbEI7SUFzREksVUFBVTtJQUNWLGVBQWU7SUFDZixjQUFjO0lDaENkLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJEd0MyQjtJQzVEM0IsaUNDSGM7SURJZCxtQkFBbUI7SUFDbkIsd0NEMkQyQztJQ3ZEM0MsWUFBWSxFQUFBO0lEWmhCO01BMERRLGFFM0NpQjtNRjRDakIsZUFBZTtNQUNmLFlBQVksRUFBQTtJQTVEcEI7TUErRE0sVUFBVTtNQUNWLGNBQWMsRUFBQTtFQWhFcEI7SUF3RUksWUFBWTtJQUNaLGNBQWM7SUFDZCxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGNFdkRlO0lGd0RmLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsU0FBUztJQ3ZEVCxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLDhCRHNEa0M7SUMxRWxDLGlDQ0hjO0lESWQsbUJBQW1CO0lBQ25CLHlCQ1dPLEVBQUE7SUZuQlg7TUFtRk0sWUFBWSxFQUFBOztBQU1sQjtFQUNFLGtCQUFrQjtFQUNsQixRQUFRLEVBQUE7O0FBR1Y7RUFDRSxlQUFlO0VBQ2YsVUFBVTtFQUNWLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsb0NBQWlDO0VBQ2pDLGlCQUFpQjtFQUNqQiwyQkFBMkIsRUFBQTtFQVA3QjtJQVNJLFlBQVk7SUFDWixnQ0FBZ0M7SUFDaEMsMkNBQXVDLEVBQUE7RUFYM0M7SUFlSSxvQ0FBaUMsRUFBQTs7QUFJckM7RUFDRSxVQUFVO0VBQ1YsV0FBVztFQUNYLG1CQUFtQjtFQUNuQix5QkFBeUI7RUFDekIsVUFBVTtFQUNWLGtCQUFrQixFQUFBOztBR3hIbEI7RUZxREUsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osYUFBYTtFQUViLGFBQWE7RUFDYixrQkFBa0I7RUFDbEIscUJBQXFCO0VBQ3JCLGlCQUFpQjtFQUNqQixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLHNCQUFzQjtFQUN0QixzQkFBc0I7RUFDdEIsa0JBQWtCO0VBQ2xCLG1CQzVEVztFRDZEWCxjQzVDd0I7RUQ2Q3hCLGdCQUFnQjtFQUNoQiwyQkFBMkI7RUFDM0Isb0JBQW9CO0VBQ3BCLCtCQUErQjtFQUMvQixlQUFlO0VBekJYLDJFQUEyRSxFQUFBO0VBNEIvRTtJQUNFLGFDN0RtQjtJRDhEbkIsd0JDbEVtQixFQUFBOztBRVh6QjtFQUNJLGdCQUFnQjtFQUNoQix5REFBd0Q7RUFDeEQsc0JBQXNCO0VBQ3RCLDRCQUE0QjtFSEU1QixpQ0NIYztFRElkLG1CQUFtQjtFQUNuQix5QkNSZ0IsRUFBQTtFRUFwQjtJSGdCSSxxQkFBcUI7SUFDckIsWUFBWTtJQUNaLGVBQWU7SUFDZixpQkFBaUI7SUFDakIsY0NsQlU7SURtQlYsc0NBQXFDLEVBQUE7RUdyQnpDO0lId0JJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJHaEIrQjtJQUMzQixlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLG9CQUFvQixFQUFBO0lBYjVCO01BZVksWUFBWTtNQUNaLGlCQUFpQjtNQUNqQixtQkFBbUI7TUFDbkIsV0FBVztNSFpuQixpQ0NIYztNRElkLG1CQUFtQjtNQUNuQix3Q0dXbUQ7TUFDM0MsbUJBQW1CLEVBQUE7TUFwQi9CO1FBdUJnQixjRnRCSyxFQUFBO01FRHJCO1FBMEJnQixjRlZDLEVBQUE7TUVoQmpCO1FBNkJnQixjRmhDQSxFQUFBO01FR2hCO1FBZ0NnQixjRmpDRCxFQUFBO01FQ2Y7UUFtQ2dCLHFCQUFxQjtRQUNyQixjQUFjO1FBQ2QsZUFBZSxFQUFBO0VBckMvQjtJQTJDUSxxQkFBcUI7SUFDckIsY0FBYztJQUNkLGNGeENNLEVBQUE7O0FHTmQ7RUFDRSxjQUFjO0VKTVosaUNDSGM7RURJZCxtQkFBbUI7RUFDbkIseUJDVm1CO0VHSXJCLHlEQUF3RDtFQUN4RCxzQkFBc0I7RUFDdEIsNEJBQTRCLEVBQUE7RUFMOUI7SUppQkkscUJBQXFCO0lBQ3JCLFlBQVk7SUFDWixlQUFlO0lBQ2YsaUJBQWlCO0lBQ2pCLGNDbEJVO0lEbUJWLHNDQUFxQztJSWJyQyxVQUFVLEVBQUE7RUFUZDs7OztJQWlCSSxxQkFBcUI7SUFDckIsWUFDRixFQUFBO0VBbkJGO0lBc0JJLGtCQUFrQjtJQUNsQixVQUFVO0lBQ1YscUJBQXFCO0lBQ3JCLFlBQVk7SUFDWixrQkFBa0I7SUpuQmxCLGlDQ0hjO0lESWQsbUJBQW1CO0lBQ25CLHdDSWtCMkMsRUFBQTtJQTNCL0M7TUppQkkscUJBQXFCO01BQ3JCLFlBQVk7TUFDWixlQUFlO01BQ2YsaUJBQWlCO01BQ2pCLGNDbEJVO01EbUJWLHNDQUFxQyxFQUFBO0lJdEJ6QztNSnlCSSxhQUFhO01BQ2IsbUJBQW1CO01BQ25CLHVCSUsrQjtNQUMzQixrQkFBa0I7TUFDbEIsZUFBZSxFQUFBO01BbEN2QjtRQXFDVSxZQUNGLEVBQUE7O0FBTVI7RUpTSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLFlBQVk7RUFDWixhQUFhO0VBRWIsYUFBYTtFQUNiLGtCQUFrQjtFQUNsQixxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsbUJDNURXO0VENkRYLGNDakRlO0VEa0RmLGdCQUFnQjtFQUNoQiwyQkFBMkI7RUFDM0Isb0JBQW9CO0VBQ3BCLCtCQUErQjtFQUMvQixlQUFlO0VBekJYLDJFQUEyRSxFQUFBO0VBNEIvRTtJQUNFLGFDN0RtQjtJRDhEbkIseUJDM0RhLEVBQUE7O0FHNkJuQjtFSktJLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLGFBQWE7RUFFYixhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLHFCQUFxQjtFQUNyQixpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixzQkFBc0I7RUFDdEIsc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQixtQkM1RFc7RUQ2RFgsY0NoRE87RURpRFAsZ0JBQWdCO0VBQ2hCLDJCQUEyQjtFQUMzQixvQkFBb0I7RUFDcEIsK0JBQStCO0VBQy9CLGVBQWU7RUF6QlgsMkVBQTJFLEVBQUE7RUE0Qi9FO0lBQ0UsYUM3RG1CO0lEOERuQix5QkMxREssRUFBQTs7QUdnQ1g7RUpDSSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLFlBQVk7RUFDWixhQUFhO0VBRWIsYUFBYTtFQUNiLGtCQUFrQjtFQUNsQixxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsbUJDNURXO0VENkRYLGNDakRlO0VEa0RmLGdCQUFnQjtFQUNoQiwyQkFBMkI7RUFDM0Isb0JBQW9CO0VBQ3BCLCtCQUErQjtFQUMvQixlQUFlO0VBekJYLDJFQUEyRSxFQUFBO0VBNEIvRTtJQUNFLGFDN0RtQjtJRDhEbkIseUJDM0RhLEVBQUE7O0FHcUNuQjtFSkhJLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLGFBQWE7RUFFYixhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLHFCQUFxQjtFQUNyQixpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixzQkFBc0I7RUFDdEIsc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQixtQkM1RFc7RUQ2RFgsY0NqRGU7RURrRGYsZ0JBQWdCO0VBQ2hCLDJCQUEyQjtFQUMzQixvQkFBb0I7RUFDcEIsK0JBQStCO0VBQy9CLGVBQWU7RUF6QlgsMkVBQTJFLEVBQUE7RUE0Qi9FO0lBQ0UsYUM3RG1CO0lEOERuQix5QkMzRGEsRUFBQTs7QUpoQm5CLHVDQUFBO0FDSkE7RUFDSSxlQUFlO0VBQ2YsK0JBQStCO0VBQy9CLHNCQUFzQixFQUFBOztBRE8xQjtFQUNFLFVBQVU7RUFDVixzQkFBc0I7RUFDdEIseUJJVFksRUFBQTs7QUpZZDtFQUNFLGlCQUFpQjtFQUNqQixjQUFjLEVBQUEiLCJzb3VyY2VzQ29udGVudCI6WyIvKiAtLS0gSW1wb3J0cyBmcm9tIGFwcCAtLS0gKi9cbkBpbXBvcnQgJy4vc2Nzcy9BcHAuc2Nzcyc7XG5AaW1wb3J0ICcuL3Njc3MvU2VsZWN0ZWRQcmljZS9TZWxlY3RlZFByaWNlLnNjc3MnO1xuQGltcG9ydCAnLi9zY3NzL0NvbXBvbmVudC1hdHJhY3Rpb25zL0NvbXBvbmVudC1hdHJhY3Rpb25zLnNjc3MnO1xuQGltcG9ydCAnLi9zY3NzL0NvbXBvbmVudC1leHRyYXMvQ29tcG9uZW50LWV4dHJhcy5zY3NzJztcblxuLyogLS0tIEltcG9ydHMgZnJvbSBwYXJ0aWFscyBoZXJlIC0tLSAqL1xuQGltcG9ydCAnLi9zY3NzL3BhcnRpYWxzL3Jvb3QnO1xuQGltcG9ydCAnLi9zY3NzL3BhcnRpYWxzL2NvbG9ycyc7XG5cblxuXG5ib2R5IHtcbiAgcGFkZGluZzogMDtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgYmFja2dyb3VuZC1jb2xvcjogJGJsdWU7XG59XG5cbi5jb250YWluZXIge1xuICBtYXgtd2lkdGg6IDExMDBweDtcbiAgbWFyZ2luOiAwIGF1dG87XG59XG4iLCJAaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1Mb2JzdGVyJmRpc3BsYXk9c3dhcCcpO1xuXG46cm9vdCB7XG4gICAgZm9udC1zaXplOiAxMHB4O1xuICAgIGZvbnQtZmFtaWx5OiAnTG9ic3RlcicsIGN1cnNpdmU7XG4gICAgbGV0dGVyLXNwYWNpbmc6IC4yNXJlbTtcbn0iLCJAaW1wb3J0ICcuL3BhcnRpYWxzL21peGlucyc7XG5AaW1wb3J0ICcuL3BhcnRpYWxzL2NvbG9ycyc7XG5AaW1wb3J0ICcuL3BhcnRpYWxzL3Jvb3QnO1xuXG4uQXBwIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuXG4gIC5sb2dvcyB7XG5cbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XG4gICAgLmxvZ28ge1xuICAgIHdpZHRoOiA0MCU7XG4gICAgQGluY2x1ZGUgZGVza3RvcC1tYWluIHtcbiAgICAgIHdpZHRoOiAxNSU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAyJTtcbiAgICAgIHRvcDogNSU7XG4gICAgICB9XG4gICAgfVxuICAgIC5jYWxjdWxhdG9yIHtcbiAgICAgIHdpZHRoOiA1MCU7XG4gICAgICBtYXJnaW4tbGVmdDogMzBweDtcbiAgICAgIEBpbmNsdWRlIGRlc2t0b3AtbWFpbiB7XG4gICAgICAgIHdpZHRoOiAxNSU7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgbGVmdDogMiU7XG4gICAgICAgIHRvcDogMjAlO1xuICAgICAgICB9XG4gICAgIH1cbiAgfVxuXG5cbiAgLkFwcC1oZWFkZXIge1xuICAgIEBpbmNsdWRlIGRpc3BsYXlGbGV4KGNlbnRlcik7XG4gICAgZmxleC13cmFwOiB3cmFwO1xuICAgIGNvbG9yOiAkZGFyay1yZWQ7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vaW1hZ2VzL3dhbGxwYXBlcl9nb2xkLnN2Z1wiKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gICAgLy8gQGluY2x1ZGUgd2FsbFBhcGVyQm94ZXMoKHVybChcIi4uL2ltYWdlcy93YWxscGFwZXJfZ29sZC5zdmdcIikpKTtcbiAgICBAaW5jbHVkZSBzaGFkb3dCb3hlcyAoJGdyZWVuKTtcbiAgICAudGl0bGUtaGVhZGVyIHtcbiAgICAgIEBpbmNsdWRlIHRpdGxlQm94ZXM7XG4gICAgfVxuICB9XG5cbiAgLmluZm8tcHJvbW90aW9uIHtcbiAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAuaW5mby1wcm9tb3Rpb24tdGV4dCB7XG4gICAgICBmb250LXNpemU6IDJyZW07XG4gICAgICBjb2xvcjogJHB1cnBsZTsgXG4gICAgICBtYXJnaW46IDEwcHg7XG4gICAgIH1cbiAgICAgXG4gIH1cblxuICAuY291bnQge1xuICAgIHdpZHRoOiA5MCU7XG4gICAgZm9udC1zaXplOiAycmVtO1xuICAgIG1hcmdpbjogMXJlbSAwO1xuICAgIC5zbGlkZXItdGl0bGUge1xuICAgICAgICBjb2xvcjogJHllbGxvdztcbiAgICAgICAgZm9udC1zaXplOiAzcmVtO1xuICAgICAgICBtYXJnaW46IDFyZW07XG4gICAgICB9XG4gICAgLnNsaWRlciB7XG4gICAgICB3aWR0aDogODUlO1xuICAgICAgbWFyZ2luOiAwIDFyZW07XG4gICAgfVxuICAgIEBpbmNsdWRlIGRpc3BsYXlGbGV4KGNlbnRlcik7XG4gICAgQGluY2x1ZGUgc2hhZG93Qm94ZXMocmdiYSgxNjIsIDAsIDI1NSwgMC43KSk7XG4gICAgQGluY2x1ZGUgbWFyZ2luQm94ZXM7XG4gIH1cblxuICAudG90YWwge1xuICAgIG1hcmdpbjogYXV0bztcbiAgICBwYWRkaW5nOiAuNXJlbTtcbiAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICBtYXgtd2lkdGg6IDYwMHB4O1xuICAgIGNvbG9yOiAkZ29sZC1kYXJrO1xuICAgIGZsZXgtd3JhcDogbm8td3JhcDtcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xuICAgIGJvdHRvbTogMDtcbiAgICBAaW5jbHVkZSBkaXNwbGF5RmxleChzcGFjZS1iZXR3ZWVuKTtcbiAgICBAaW5jbHVkZSBzaGFkb3dCb3hlcygkRCk7XG4gICAgLnRvdGFsX19wcmljZSB7XG4gICAgICB3aWR0aDogMTAwcHg7XG4gICAgfVxuICB9XG59XG5cblxuLmNlbnRlciB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiAtcHg7XG59XG5cbi5sYWJlbF9fY2hlY2tib3gge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHdpZHRoOiAxZW07XG4gIGhlaWdodDogMWVtO1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGJvcmRlcjogNXB4IHNvbGlkIHJnYmEoMCwwLDAsMC4xKTtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG4gIHRyYW5zaXRpb246IGJvcmRlciAuM3MgZWFzZTtcbiAgaS5pY29uIHtcbiAgICBvcGFjaXR5OiAwLjI7XG4gICAgdHJhbnNpdGlvbjogb3BhY2l0eSAuM3MgLjFzIGVhc2U7XG4gICAgLXdlYmtpdC10ZXh0LXN0cm9rZTogM3B4IHJnYmEoMCwwLDAsLjUpO1xuICB9XG4gIFxuICAmOmhvdmVyIHtcbiAgICBib3JkZXI6IDVweCBzb2xpZCByZ2JhKDAsMCwwLDAuMik7XG4gIH1cbn1cblxuLmxhYmVsX19jaGVja2JveF9fY2hlY2tlZCB7XG4gIHdpZHRoOiAxZW07XG4gIGhlaWdodDogMWVtO1xuICBiYWNrZ3JvdW5kOiAjMDBkNDc4O1xuICBib3JkZXI6IDRweCBzb2xpZCAjMDBkNDc4O1xuICBvcGFjaXR5OiAxO1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG59XG4iLCJAaW1wb3J0ICcuL2NvbG9ycyc7XG5cblxuQG1peGluIGRlc2t0b3AtbWFpbiB7XG4gICAgQG1lZGlhIChtaW4td2lkdGg6IDE1MDBweCkge1xuICAgICAgQGNvbnRlbnRcbiAgICB9XG4gIH1cblxuQG1peGluIHNoYWRvd0JveGVzKCRiYWNrZ3JvdW5kKSB7XG4gICAgYm94LXNoYWRvdzogMCAzcHggOHB4IDRweCAkYmx1ZV9za3k7XG4gICAgYm9yZGVyLXJhZGl1czogMjBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkYmFja2dyb3VuZDtcbn1cblxuQG1peGluIG1hcmdpbkJveGVzIHtcbiAgICBtYXJnaW46IDFyZW07XG59XG5cbkBtaXhpbiB0aXRsZUJveGVzIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgbWFyZ2luOiAyMHB4O1xuICAgIGZvbnQtc2l6ZTogM3JlbTtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBjb2xvcjogJGJsdWU7XG4gICAgdGV4dC1zaGFkb3c6ICR3aGl0ZSAwLjFlbSAwLjFlbSAwLjJlbTtcbn1cbkBtaXhpbiBkaXNwbGF5RmxleCgkanVzdGlmeS1jb250ZW50KSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogJGp1c3RpZnktY29udGVudDtcbn1cblxuQG1peGluIHdhbGxQYXBlckJveGVzICgkcGF0aCkge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6ICRwYXRoO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbn1cblxuQG1peGluIGJveF9zaGFkb3cgKCRsZXZlbCkge1xuICAgIEBpZiAkbGV2ZWwgPT0gMCB7XG4gICAgICAgIGJveC1zaGFkb3c6IG5vbmU7XG4gICAgfSBAZWxzZSBpZiAkbGV2ZWwgPT0gMSB7XG4gICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCByZ2JhKDAsIDAsIDAsIDAuMTIpLCAwIDFweCAycHggcmdiYSgwLCAwLCAwLCAwLjI0KVxuICAgIH0gQGVsc2UgaWYgJGxldmVsID09IDIge1xuICAgICAgICBib3gtc2hhZG93OiAwIDNweCA2cHggcmdiYSgwLCAwLCAwLCAwLjE2KSwgMCAzcHggNnB4IHJnYmEoMCwgMCwgMCwgMC4yMylcbiAgICB9IEBlbHNlIGlmICRsZXZlbCA9PSAzIHtcbiAgICAgICAgYm94LXNoYWRvdzogMCAxMHB4IDIwcHggcmdiYSgwLCAwLCAwLCAwLjE5KSwgMCA2cHggNnB4IHJnYmEoMCwgMCwgMCwgMC4yMylcbiAgICB9IEBlbHNlIGlmICRsZXZlbCA9PSA0IHtcbiAgICAgICAgYm94LXNoYWRvdzogMCAxNHB4IDI4cHggcmdiYSgwLCAwLCAwLCAwLjI1KSwgMCAxMHB4IDEwcHggcmdiYSgwLCAwLCAwLCAwLjIyKVxuICAgIH0gQGVsc2UgaWYgJGxldmVsID09IDUge1xuICAgICAgICBib3gtc2hhZG93OiAwIDE5cHggMzhweCByZ2JhKDAsIDAsIDAsIDAuMyksIDAgMTVweCAxMnB4IHJnYmEoMCwgMCwgMCwgMC4yMilcbiAgICB9XG59XG4gIFxuQG1peGluIGJ0biAoJGNvbG9yLCAkYmFja0dyb3VuZENvbG9ySG92ZXIpIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYmFja2dyb3VuZDogbm9uZTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgb3V0bGluZTogbm9uZTtcbiAgICAvLyBwYWRkaW5nOiAuNXJlbSAxLjdyZW07XG4gICAgbWFyZ2luOiAuNXJlbTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIGZvbnQtc2l6ZTogMS4zcmVtO1xuICAgIGZvbnQtd2VpZ2h0OiA3MDA7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpbGwtY2hhbmdlOiB0cmFuc2Zvcm07XG4gICAgbGV0dGVyLXNwYWNpbmc6IC4wNXJlbTtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgYmFja2dyb3VuZDogJHdoaXRlO1xuICAgIGNvbG9yOiAkY29sb3I7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICB0cmFuc2l0aW9uOiAuM3MgZWFzZS1pbi1vdXQ7XG4gICAgYm9yZGVyLXJhZGl1czogLjVyZW07XG4gICAgZm9udC1mYW1pbHk6ICdMb2JzdGVyJywgY3Vyc2l2ZTtcbiAgICBmb250LXNpemU6IDJyZW07XG4gICAgXG4gICAgQGluY2x1ZGUgYm94X3NoYWRvdyg1KTtcbiAgICAmOmhvdmVyIHtcbiAgICAgIGNvbG9yOiAkeWVsbG93O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGJhY2tHcm91bmRDb2xvckhvdmVyO1xuICAgIH1cbn0iLCJcbiRvcmFuZ2U6ICNmZDM1MDA7XG4kb3JhbmdlLXBhc3RlbDogI2U3YWEyNTtcbiRncmVlbjogIzAwZGUwMDtcbiRkYXJrLWdyZWVuOiAjMDA2MzAwO1xuJGxpZ2h0LWdyZWVuOiAjMzhlMmVlO1xuJGJsdWU6ICMwMDdiZmY7XG4kYmx1ZV9za3k6ICM1OGE5ZmY7XG4kcGluazogI2NjMDBmZjtcbiRnb2xkOiAjZmZmOTAxO1xuJHdoaXRlOiAjZmZmZmZmO1xuJGJsYWNrOiAjMDAwMDAwO1xuJGJsdWVfYmFja2dyb3VuZDogIzAwNzNjMTtcbiRyZWQ6ICNmZjAwMDA7XG4kZGFyay1yZWQ6ICNhYzE3MTdjZTtcbiRwdXJwbGU6IHJnYigxMjgsIDAsIDEyOCk7XG4kZ3JheTogIzVmNTg3NjtcbiR2YWxpZC1hbGVydDogI2ZmN2Y3ZjtcbiRpbmRpZ286ICM0YjAwODI7XG4keWVsbG93OiByZ2IoMjU1LCAyNTUsIDApO1xuJGZ1Y2hzaWE6ICNmZjAwZmY7XG4kY29yYWw6ICNmZjdmNTA7XG4kb2xpdmVkcmFiOiAjNmI4ZTIzO1xuJEQ6ICMyODVhZTQ7XG4kZ3JlZW4tcGFzdGVsOiAjMDA4NjY0O1xuJGdvbGQtZGFyazogI2UyZDMwMDtcblxuJGRlZXBlcjogZGFya2VuKCRwdXJwbGUsIDUlKTtcbiRsaWdodGVyOiBsaWdodGVuKCRsaWdodC1ncmVlbiwgMTAlKTsiLCJAaW1wb3J0ICcuLi9wYXJ0aWFscy9taXhpbnMnO1xuQGltcG9ydCAnLi4vcGFydGlhbHMvY29sb3JzJztcblxuICAuYnV0dG9uIHtcbiAgICBAaW5jbHVkZSBidG4oJGRlZXBlciwgJHB1cnBsZSlcbiAgfVxuXG4gIFxuXG4gIFxuIiwiQGltcG9ydCAnLi4vcGFydGlhbHMvbWl4aW5zJztcbkBpbXBvcnQgJy4uL3BhcnRpYWxzL2NvbG9ycyc7XG5cblxuLmF0cmFjdGlvbnMge1xuICAgIG1hcmdpbi10b3A6IDFyZW07XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi9pbWFnZXMvd2FsbHBhcGVyX2dvbGQuc3ZnJyk7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIEBpbmNsdWRlIHNoYWRvd0JveGVzKCRkYXJrLWdyZWVuKTtcbiAgICAuc2xpZGVycy10aXRsZSB7XG4gICAgICAgIEBpbmNsdWRlIHRpdGxlQm94ZXM7XG4gICAgfVxuICAgIC5zbGlkZXJzIHtcbiAgICAgICAgQGluY2x1ZGUgZGlzcGxheUZsZXgoY2VudGVyKTtcbiAgICAgICAgZmxleC13cmFwOiB3cmFwO1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgIHBhZGRpbmctYm90dG9tOiAxNXB4O1xuICAgICAgICAuYXRyYWN0aW9ucy1zbGlkZXIge1xuICAgICAgICAgICAgd2lkdGg6IDI1MHB4O1xuICAgICAgICAgICAgbGV0dGVyLXNwYWNpbmc6IDE7XG4gICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgICAgICBAaW5jbHVkZSBzaGFkb3dCb3hlcyhyZ2JhKDE2MiwgMCwgMjU1LCAwLjcpKTtcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDJyZW07XG4gICAgICAgICAgICAvLyBjb2xvcjogJG9yYW5nZTtcbiAgICAgICAgICAgIC5waWd0YWlscyB7XG4gICAgICAgICAgICAgICAgY29sb3I6ICRsaWdodC1ncmVlbjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5mYWNlLXBhaW50aW5nIHtcbiAgICAgICAgICAgICAgICBjb2xvcjogJGZ1Y2hzaWE7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAudGF0b29zIHtcbiAgICAgICAgICAgICAgICBjb2xvcjogJG9yYW5nZTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5iYWxvb25zIHtcbiAgICAgICAgICAgICAgICBjb2xvcjogJGdyZWVuO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLmF0cmFjdGlvbnMtdGl0bGUge1xuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICAgICAgICAgICAgICBtYXJnaW46IC4yNXJlbTtcbiAgICAgICAgICAgICAgICBmb250LXNpemU6IDJyZW07XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgfVxuICAgIC50b3RhbC1hdHJhY3Rpb25zIHtcbiAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgICBtYXJnaW46IDVyZW0gMDtcbiAgICAgICAgY29sb3I6ICRnb2xkO1xuICAgIH1cblxufSIsIkBpbXBvcnQgJy4uL3BhcnRpYWxzL2NvbG9ycyc7XG5AaW1wb3J0ICcuLi9wYXJ0aWFscy9taXhpbnMnO1xuXG4uZXh0cmFzIHtcbiAgbWFyZ2luOiAxcmVtIDA7XG4gIEBpbmNsdWRlIHNoYWRvd0JveGVzICgkb3JhbmdlLXBhc3RlbCk7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vaW1hZ2VzL3dhbGxwYXBlcl9nb2xkLnN2ZycpO1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuXG4gIC5leHRyYXMtdGl0bGUge1xuICAgIEBpbmNsdWRlIHRpdGxlQm94ZXM7XG4gICAgd2lkdGg6IDkwJTtcbiAgICBcbiAgfVxuXG4gIC5hc3Npc3RhbnQsXG4gIC5udW1iZXJCYWxvb24sXG4gIC5waW5pYXRhLFxuICAuZWtvVGFibGV3YXJlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgbWFyZ2luOiAxcmVtXG4gIH1cblxuICAuYm91cXVldCB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiA4MCU7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIG1hcmdpbjogMjBweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgQGluY2x1ZGUgc2hhZG93Qm94ZXMocmdiYSgxNjIsIDAsIDI1NSwgMC43KSk7XG4gICAgICAuYm91cXVldC10aXRsZSB7XG4gICAgICAgIEBpbmNsdWRlIHRpdGxlQm94ZXM7XG4gICAgICB9XG4gICAgICAuYm91cXVldC1idG5zIHtcbiAgICAgICAgQGluY2x1ZGUgZGlzcGxheUZsZXgoY2VudGVyKTtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBmbGV4LXdyYXA6IHdyYXA7XG4gICAgICAgIC8vIG1hcmdpbjogMjBweDtcbiAgICAgICAgLmJ0bi1ib3VxdWV0IHtcbiAgICAgICAgICBtYXJnaW46IDFyZW1cbiAgICAgICAgfVxuICAgICAgfVxuICB9XG4gIFxufVxuXG4uYnRuLWFzc2lzdGFudCB7XG4gICAgQGluY2x1ZGUgYnRuKCRvbGl2ZWRyYWIsICRvbGl2ZWRyYWIpO1xufVxuXG4uYnRuLWJhbG9vbnMge1xuICAgIEBpbmNsdWRlIGJ0bigkRCwgJEQpO1xufVxuXG4uYnRuLW51bWJlciB7XG4gICAgQGluY2x1ZGUgYnRuKCRvbGl2ZWRyYWIsICRvbGl2ZWRyYWIpO1xufVxuXG4uYnRuLXBpbmF0YSB7XG4gIEBpbmNsdWRlIGJ0bigkb2xpdmVkcmFiLCAkb2xpdmVkcmFiKTtcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style><script charset="utf-8" src="./React App_files/main.9cc3805d3559f57e2d62.hot-update.js"></script></head>
+  <body class="body" data-new-gr-c-s-check-loaded="14.1051.0" data-gr-ext-installed="">
+    
+    <div id="root"><div class="App container"><div class="logos"><img class="logo" src="./React App_files/logo.41ac3f49.svg" alt="Sala_Zabaw_Piotruś"><img class="calculator" src="./React App_files/calculator.55313006.svg" alt="Kalkulator_urodzin"></div><header class="App-header"><div><p class="title-header">Wybierz dzień tygodnia:</p></div><div><div><div><button value="38" class="button" style="background-color: purple; color: yellow; transform: none; box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"> Od poniedziałku do czwartku - 38zł<br>( 7 - min. liczba dzieci )</button></div></div><div><div><button value="42" class="button"> Piątek - 42zł<br>( 7 - min. liczba dzieci )</button></div></div><div><div><button value="45" class="button"> Sobota, niedziela i święta - 45zł<br>( 8 - min. liczba dzieci )</button></div></div></div><div class="info-promotion"><h3 class="info-promotion-text">Jubilat i Gość gratis! Nie płacisz za 2 dzieci!</h3></div><div class="count"><div><p class="slider-title">Wybierz liczbę dzieci:</p></div><div class="slider"><div style="height: 40px; width: 100%; border-radius: 4px; background: rgb(36, 75, 168); position: relative; user-select: none; cursor: pointer;"><div tabindex="0" role="slider" aria-valuenow="22" aria-valuemin="7" aria-valuemax="30" aria-valuetext="22" style="top: 3px; position: absolute; cursor: -webkit-grab; transform: translateX(93.6094px); transition: all 0s ease 0s; width: 34px; height: 24px; outline: none; pointer-events: none;"><svg x="0px" y="0px" width="34px" height="64px" viewBox="0 0 40 64" style="position: absolute; top: -25px; left: 0px; transform: translateY(0px); transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><path d="M38.8,43.9c0,10.4-8.5,18.9-18.9,18.9S1,54.4,1,43.9S9.5,24,19.9,24S38.8,33.5,38.8,43.9z" style="transition: all 0.3s ease 0s; fill: rgb(36, 75, 168);"></path></svg><div aria-hidden="true" style="background: rgb(255, 255, 255); height: 34px; width: 34px; border-radius: 50%; position: absolute; transform: translateY(0px); transition: all 0.1s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><span style="position: absolute; left: 0px; width: 34px; color: rgb(36, 75, 168); font-weight: 600; top: 10px;"><section aria-label="22" style="display: flex; align-items: center; justify-content: center;"><span aria-hidden="true" style="width: 9px; height: 14px; perspective: 370px; overflow: hidden; display: inline-block; text-align: left;"><span style="position: absolute; height: 100%; transform-style: preserve-3d; transform: rotateX(-72deg); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;"><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); outline: transparent solid 1px;">0</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(36deg) translateZ(21px); outline: transparent solid 1px;">1</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(72deg) translateZ(21px); outline: transparent solid 1px;">2</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(108deg) translateZ(21px); outline: transparent solid 1px;">3</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(144deg) translateZ(21px); outline: transparent solid 1px;">4</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(180deg) translateZ(21px); outline: transparent solid 1px;">5</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(216deg) translateZ(21px); outline: transparent solid 1px;">6</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(252deg) translateZ(21px); outline: transparent solid 1px;">7</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(288deg) translateZ(21px); outline: transparent solid 1px;">8</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(324deg) translateZ(21px); outline: transparent solid 1px;">9</span></span><span data="1" style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; left: 0px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); visibility: hidden; outline: transparent solid 1px;">2</span></span><span aria-hidden="true" style="width: 9px; height: 14px; perspective: 370px; overflow: hidden; display: inline-block; text-align: left;"><span style="position: absolute; height: 100%; transform-style: preserve-3d; transform: rotateX(648deg); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;"><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); outline: transparent solid 1px;">0</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(36deg) translateZ(21px); outline: transparent solid 1px;">1</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(72deg) translateZ(21px); outline: transparent solid 1px;">2</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(108deg) translateZ(21px); outline: transparent solid 1px;">3</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(144deg) translateZ(21px); outline: transparent solid 1px;">4</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(180deg) translateZ(21px); outline: transparent solid 1px;">5</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(216deg) translateZ(21px); outline: transparent solid 1px;">6</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(252deg) translateZ(21px); outline: transparent solid 1px;">7</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(288deg) translateZ(21px); outline: transparent solid 1px;">8</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(324deg) translateZ(21px); outline: transparent solid 1px;">9</span></span><span data="0" style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; left: 0px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); visibility: hidden; outline: transparent solid 1px;">2</span></span></section></span></div></div><div style="display: flex; width: 100%; justify-content: space-around; min-height: 10px; pointer-events: none; padding-top: 15px;"><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span></div></div></div></div></header><section><div class="atractions"><p class="sliders-title">Ustaw ilość dzieci, które skorzystają z poniższych atrakcji <br>(płatne od dziecka):</p><div class="sliders"><div class="atractions-slider"><h1 class="atractions-title pigtails">Warkoczyki <br>12 zł </h1><div style="height: 40px; width: 100%; border-radius: 4px; background: rgb(36, 75, 168); position: relative; user-select: none; cursor: pointer;"><div tabindex="0" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="30" aria-valuetext="0" style="top: 3px; position: absolute; cursor: -webkit-grab; transform: translateX(3px); transition: all 0s ease 0s; width: 34px; height: 24px; outline: none; pointer-events: none;"><svg x="0px" y="0px" width="34px" height="64px" viewBox="0 0 40 64" style="position: absolute; top: -25px; left: 0px; transform: translateY(0px); transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><path d="M38.8,43.9c0,10.4-8.5,18.9-18.9,18.9S1,54.4,1,43.9S9.5,24,19.9,24S38.8,33.5,38.8,43.9z" style="transition: all 0.3s ease 0s; fill: rgb(36, 75, 168);"></path></svg><div aria-hidden="true" style="background: rgb(255, 255, 255); height: 34px; width: 34px; border-radius: 50%; position: absolute; transform: translateY(0px); transition: all 0.1s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><span style="position: absolute; left: 0px; width: 34px; color: rgb(36, 75, 168); font-weight: 600; top: 10px;"><section aria-label="0" style="display: flex; align-items: center; justify-content: center;"><span aria-hidden="true" style="width: 9px; height: 14px; perspective: 370px; overflow: hidden; display: inline-block; text-align: left;"><span style="position: absolute; height: 100%; transform-style: preserve-3d; transform: rotateX(720deg); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;"><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); outline: transparent solid 1px;">0</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(36deg) translateZ(21px); outline: transparent solid 1px;">1</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(72deg) translateZ(21px); outline: transparent solid 1px;">2</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(108deg) translateZ(21px); outline: transparent solid 1px;">3</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(144deg) translateZ(21px); outline: transparent solid 1px;">4</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(180deg) translateZ(21px); outline: transparent solid 1px;">5</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(216deg) translateZ(21px); outline: transparent solid 1px;">6</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(252deg) translateZ(21px); outline: transparent solid 1px;">7</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(288deg) translateZ(21px); outline: transparent solid 1px;">8</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(324deg) translateZ(21px); outline: transparent solid 1px;">9</span></span><span data="0" style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; left: 0px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); visibility: hidden; outline: transparent solid 1px;">0</span></span></section></span></div></div><div style="display: flex; width: 100%; justify-content: space-around; min-height: 10px; pointer-events: none; padding-top: 15px;"><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span></div></div></div><div class="atractions-slider"><h1 class="atractions-title face-painting ">Malowanie twarzy<br>10 zł</h1><div style="height: 40px; width: 100%; border-radius: 4px; background: rgb(36, 75, 168); position: relative; user-select: none; cursor: pointer;"><div tabindex="0" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="30" aria-valuetext="0" style="top: 3px; position: absolute; cursor: -webkit-grab; transform: translateX(3px); transition: all 0s ease 0s; width: 34px; height: 24px; outline: none; pointer-events: none;"><svg x="0px" y="0px" width="34px" height="64px" viewBox="0 0 40 64" style="position: absolute; top: -25px; left: 0px; transform: translateY(0px); transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><path d="M38.8,43.9c0,10.4-8.5,18.9-18.9,18.9S1,54.4,1,43.9S9.5,24,19.9,24S38.8,33.5,38.8,43.9z" style="transition: all 0.3s ease 0s; fill: rgb(36, 75, 168);"></path></svg><div aria-hidden="true" style="background: rgb(255, 255, 255); height: 34px; width: 34px; border-radius: 50%; position: absolute; transform: translateY(0px); transition: all 0.1s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><span style="position: absolute; left: 0px; width: 34px; color: rgb(36, 75, 168); font-weight: 600; top: 10px;"><section aria-label="0" style="display: flex; align-items: center; justify-content: center;"><span aria-hidden="true" style="width: 9px; height: 14px; perspective: 370px; overflow: hidden; display: inline-block; text-align: left;"><span style="position: absolute; height: 100%; transform-style: preserve-3d; transform: rotateX(720deg); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;"><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); outline: transparent solid 1px;">0</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(36deg) translateZ(21px); outline: transparent solid 1px;">1</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(72deg) translateZ(21px); outline: transparent solid 1px;">2</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(108deg) translateZ(21px); outline: transparent solid 1px;">3</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(144deg) translateZ(21px); outline: transparent solid 1px;">4</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(180deg) translateZ(21px); outline: transparent solid 1px;">5</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(216deg) translateZ(21px); outline: transparent solid 1px;">6</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(252deg) translateZ(21px); outline: transparent solid 1px;">7</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(288deg) translateZ(21px); outline: transparent solid 1px;">8</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(324deg) translateZ(21px); outline: transparent solid 1px;">9</span></span><span data="0" style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; left: 0px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); visibility: hidden; outline: transparent solid 1px;">0</span></span></section></span></div></div><div style="display: flex; width: 100%; justify-content: space-around; min-height: 10px; pointer-events: none; padding-top: 15px;"><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span></div></div></div><div class="atractions-slider"><h1 class="atractions-title tatoos">Tatuaże <br>8 zł</h1><div style="height: 40px; width: 100%; border-radius: 4px; background: rgb(36, 75, 168); position: relative; user-select: none; cursor: pointer;"><div tabindex="0" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="30" aria-valuetext="0" style="top: 3px; position: absolute; cursor: -webkit-grab; transform: translateX(3px); transition: all 0s ease 0s; width: 34px; height: 24px; outline: none; pointer-events: none;"><svg x="0px" y="0px" width="34px" height="64px" viewBox="0 0 40 64" style="position: absolute; top: -25px; left: 0px; transform: translateY(0px); transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><path d="M38.8,43.9c0,10.4-8.5,18.9-18.9,18.9S1,54.4,1,43.9S9.5,24,19.9,24S38.8,33.5,38.8,43.9z" style="transition: all 0.3s ease 0s; fill: rgb(36, 75, 168);"></path></svg><div aria-hidden="true" style="background: rgb(255, 255, 255); height: 34px; width: 34px; border-radius: 50%; position: absolute; transform: translateY(0px); transition: all 0.1s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><span style="position: absolute; left: 0px; width: 34px; color: rgb(36, 75, 168); font-weight: 600; top: 10px;"><section aria-label="0" style="display: flex; align-items: center; justify-content: center;"><span aria-hidden="true" style="width: 9px; height: 14px; perspective: 370px; overflow: hidden; display: inline-block; text-align: left;"><span style="position: absolute; height: 100%; transform-style: preserve-3d; transform: rotateX(720deg); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;"><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); outline: transparent solid 1px;">0</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(36deg) translateZ(21px); outline: transparent solid 1px;">1</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(72deg) translateZ(21px); outline: transparent solid 1px;">2</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(108deg) translateZ(21px); outline: transparent solid 1px;">3</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(144deg) translateZ(21px); outline: transparent solid 1px;">4</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(180deg) translateZ(21px); outline: transparent solid 1px;">5</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(216deg) translateZ(21px); outline: transparent solid 1px;">6</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(252deg) translateZ(21px); outline: transparent solid 1px;">7</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(288deg) translateZ(21px); outline: transparent solid 1px;">8</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(324deg) translateZ(21px); outline: transparent solid 1px;">9</span></span><span data="0" style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; left: 0px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); visibility: hidden; outline: transparent solid 1px;">0</span></span></section></span></div></div><div style="display: flex; width: 100%; justify-content: space-around; min-height: 10px; pointer-events: none; padding-top: 15px;"><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span></div></div></div><div class="atractions-slider"><h1 class="atractions-title baloons">Balonik modelowany <br>4 zł</h1><div style="height: 40px; width: 100%; border-radius: 4px; background: rgb(36, 75, 168); position: relative; user-select: none; cursor: pointer;"><div tabindex="0" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="30" aria-valuetext="0" style="top: 3px; position: absolute; cursor: -webkit-grab; transform: translateX(3px); transition: all 0s ease 0s; width: 34px; height: 24px; outline: none; pointer-events: none;"><svg x="0px" y="0px" width="34px" height="64px" viewBox="0 0 40 64" style="position: absolute; top: -25px; left: 0px; transform: translateY(0px); transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><path d="M38.8,43.9c0,10.4-8.5,18.9-18.9,18.9S1,54.4,1,43.9S9.5,24,19.9,24S38.8,33.5,38.8,43.9z" style="transition: all 0.3s ease 0s; fill: rgb(36, 75, 168);"></path></svg><div aria-hidden="true" style="background: rgb(255, 255, 255); height: 34px; width: 34px; border-radius: 50%; position: absolute; transform: translateY(0px); transition: all 0.1s cubic-bezier(0.86, 0, 0.07, 1) 0s;"><span style="position: absolute; left: 0px; width: 34px; color: rgb(36, 75, 168); font-weight: 600; top: 10px;"><section aria-label="0" style="display: flex; align-items: center; justify-content: center;"><span aria-hidden="true" style="width: 9px; height: 14px; perspective: 370px; overflow: hidden; display: inline-block; text-align: left;"><span style="position: absolute; height: 100%; transform-style: preserve-3d; transform: rotateX(720deg); transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;"><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); outline: transparent solid 1px;">0</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(36deg) translateZ(21px); outline: transparent solid 1px;">1</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(72deg) translateZ(21px); outline: transparent solid 1px;">2</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(108deg) translateZ(21px); outline: transparent solid 1px;">3</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(144deg) translateZ(21px); outline: transparent solid 1px;">4</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(180deg) translateZ(21px); outline: transparent solid 1px;">5</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(216deg) translateZ(21px); outline: transparent solid 1px;">6</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(252deg) translateZ(21px); outline: transparent solid 1px;">7</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(288deg) translateZ(21px); outline: transparent solid 1px;">8</span><span style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(324deg) translateZ(21px); outline: transparent solid 1px;">9</span></span><span data="0" style="width: 9px; height: 14px; line-height: 14px; font-size: 13px; left: 0px; position: absolute; display: flex; justify-content: center; align-items: center; text-align: center; -webkit-font-smoothing: antialiased; color: black; background: white; transform: rotateX(0deg) translateZ(21px); visibility: hidden; outline: transparent solid 1px;">0</span></span></section></span></div></div><div style="display: flex; width: 100%; justify-content: space-around; min-height: 10px; pointer-events: none; padding-top: 15px;"><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span><span style="height: 10px; width: 1px; background: rgb(53, 98, 205);"></span></div></div></div></div></div></section><section class="extras"><div><p class="extras-title">Dodatki do urodzin:</p></div><div class="assistant"><div><button value="100" class="btn-assistant">Asystent urodzin - 100 zł</button><span class="center label__checkbox"><i class="fa fa-check icon"></i></span></div></div><div class="numberBaloon"><div><button value="30" class="btn-number">Balon cyfra na powietrze - 30 zł</button><span class="center label__checkbox"><i class="fa fa-check icon"></i></span></div></div><div class="piniata"><div><button value="100" class="btn-number">Piniata - 100 zł</button><span class="center label__checkbox"><i class="fa fa-check icon"></i></span></div></div><div class="ekoTableware"><div><button value="2" class="btn-number">Zastawa eko - 2 zł/szt - 2 zł</button><span class="center label__checkbox"><i class="fa fa-check icon"></i></span></div></div><div class="bouquet"><p class="bouquet-title">BUKIETY BALONOWE</p><div class="bouquet-btns"><div class="btn-bouquet"><div><button value="30" class="btn-baloons">1 bukiety - 30zł</button><span class="center label__checkbox" style="background-color: white; border: 5px solid rgba(0, 0, 0, 0.1);"><i class="fa fa-check icon"></i></span></div></div><div class="btn-bouquet"><div><button value="50" class="btn-baloons">2 bukiety - 50zł</button><span class="center label__checkbox" style="background-color: white; border: 5px solid rgba(0, 0, 0, 0.1);"><i class="fa fa-check icon"></i></span></div></div><div class="btn-bouquet"><div><button value="70" class="btn-baloons">3 bukiety - 70zł</button><span class="center label__checkbox" style="background-color: white; border: 5px solid rgba(0, 0, 0, 0.1);"><i class="fa fa-check icon"></i></span></div></div></div></div></section><section class="total"><div class="total__text"><h1>Łączna kwota imprezy urodzinowej:</h1></div><div class="total__price"><h1>760 zł</h1></div></section></div></div>
+    
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/vendors_main.chunk.js"></script><script src="./React App_files/main.chunk.js"></script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

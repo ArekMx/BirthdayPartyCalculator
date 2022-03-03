@@ -46,9 +46,19 @@
   }
 
   .info-promotion {
+     margin-top: 20px;
      position: relative;
-     font-size: 3rem;
-     color: $purple; 
+     border-radius: 20px;
+     background-color: rgba(162, 0, 255, 0.7);
+     .info-promotion-text {
+      font-size: 2rem;
+      color: $gold; 
+      margin: 10px;
+      @include desktop-main {
+        font-size: 3rem;
+      }
+     }
+     
   }
 
   .count {

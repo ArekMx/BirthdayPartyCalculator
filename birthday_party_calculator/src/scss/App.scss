@@ -38,7 +38,7 @@
       margin: 0 1rem;
     }
     @include displayFlex(center);
-    @include shadowBoxes($purple);
+    @include shadowBoxes(rgba(162, 0, 255, 0.7));
     @include marginBoxes;
   }
 

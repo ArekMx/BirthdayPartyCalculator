@@ -5,6 +5,7 @@ import React, {useState, useEffect} from "react"
 import { ComponentAtractions } from "../js/Component-atractions/ComponentAtractions";
 import { ComponentTableSelect } from "./Component-table-select/TableSelect";
 import { ComponentExtras } from './Component-extras/ComponentExtras';
+import { logo } from "../images/logo.svg";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <div className="App container">
+      <img className={"logo"} src={logo} alt={"Sala_Zabaw_Piotruś"}/>
       <header className="App-header">
         <ComponentTableSelect numOfkids={totalAll}/>
       </header>

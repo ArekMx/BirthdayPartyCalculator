@@ -4,7 +4,7 @@
 .extras {
   margin: 1rem 0;
   @include shadowBoxes ($orange-pastel);
-  background-image: url('../../images/wallpaper_orange.svg');
+  background-image: url('../../images/wallpaper_gold.svg');
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -28,7 +28,7 @@
     display: inline-block;
     margin: 20px;
     text-align: center;
-    @include shadowBoxes (rgba(255, 255, 0, 0.7));
+    @include shadowBoxes(rgba(162, 0, 255, 0.7));
       .bouquet-title {
         font-size: 2rem;
         color: $dark-green;

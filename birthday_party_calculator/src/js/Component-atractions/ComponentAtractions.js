@@ -45,20 +45,20 @@ export const ComponentAtractions =({onUp}) => {
             <p className="sliders-title">Ustaw ilość dzieci, które skorzystają z poniższych atrakcji <br></br>(płatne od dziecka):</p>
             <div className="sliders">
             <div className="atractions-slider">
-                <h1 className="atractions-title pigtails">Zaplatanie warkoczyków - 12 zł </h1>
+                <h1 className="atractions-title pigtails">Warkoczyki <br></br>12 zł </h1>
                 <Slider value={0} min={0} max={30} onChange={(x) => setPigtails(x)} />
                 {/* <button onClick={()=>{setPigtails(''); setPigtailsMin(0); console.log(pigtailsMin);}}>reset</button> */}
             </div>
             <div className="atractions-slider">
-                <h1 className="atractions-title face-painting ">Malowanie twarzy - 10 zł</h1>
+                <h1 className="atractions-title face-painting ">Malowanie twarzy<br></br>10 zł</h1>
                 <Slider value={0} min={0} max={30} onChange={(x) => setFacePainting(x)} />
             </div>
             <div className="atractions-slider">
-                <h1 className="atractions-title tatoos">Tatuaże - 8 zł</h1>
+                <h1 className="atractions-title tatoos">Tatuaże <br></br>8 zł</h1>
                 <Slider value={0} min={0} max={30} onChange={(x) => setTatoos(x)} />
             </div>
             <div className="atractions-slider">
-                <h1 className="atractions-title baloons">Balonik modelowany - 4 zł</h1>
+                <h1 className="atractions-title baloons">Balonik modelowany <br></br>4 zł</h1>
                 <Slider value={0} min={0} max={30} onChange={(x) => setBaloons(x)} />
             </div>
             </div>

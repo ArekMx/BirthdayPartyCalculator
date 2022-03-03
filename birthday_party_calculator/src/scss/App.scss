@@ -4,6 +4,17 @@
 
 .App {
   text-align: center;
+
+  .logo {
+    width: 40%;
+    @include desktop-main {
+      width: 15%;
+      position: absolute;
+      left: 2%;
+      top: 5%;
+    }
+  }
+
   .App-header {
     @include displayFlex(center);
     flex-wrap: wrap;

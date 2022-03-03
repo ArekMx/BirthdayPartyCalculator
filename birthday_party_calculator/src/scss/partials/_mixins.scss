@@ -1,6 +1,12 @@
 @import './colors';
 
 
+@mixin desktop-main {
+    @media (min-width: 1500px) {
+      @content
+    }
+  }
+
 @mixin shadowBoxes($background) {
     box-shadow: 0 3px 8px 4px $blue_sky;
     border-radius: 20px;

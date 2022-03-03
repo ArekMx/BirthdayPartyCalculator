@@ -49,9 +49,9 @@ function App() {
 
   return (
     <div className="App container">
-      <div><img className={"calculator"} src={calculator} alt={"Kalkulator_urodzin"}/></div>
+  
       <div><img className={"logo"} src={logo} alt={"Sala_Zabaw_Piotruś"}/></div>
-      
+      <div><img className={"calculator"} src={calculator} alt={"Kalkulator_urodzin"}/></div>
       <header className="App-header">
         <ComponentTableSelect numOfkids={totalAll}/>
       </header>

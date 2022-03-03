@@ -30,10 +30,7 @@
     text-align: center;
     @include shadowBoxes(rgba(162, 0, 255, 0.7));
       .bouquet-title {
-        font-size: 2rem;
-        color: $dark-green;
-        display: inline-block;
-        margin: .5rem;
+        @include titleBoxes;
       }
       .bouquet-btns {
         @include displayFlex(center);

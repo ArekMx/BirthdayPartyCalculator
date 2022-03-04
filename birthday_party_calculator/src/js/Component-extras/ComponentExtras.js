@@ -13,7 +13,7 @@ export const ComponentExtras =({onAddTotalExtras, onAddTableware}) => {
         bouquet: {
             1: {
                 price: 30,
-                balloon: "1 bukiety",
+                balloon: "1 bukiet",
             },
             2: {
                 price: 50,
@@ -34,7 +34,7 @@ export const ComponentExtras =({onAddTotalExtras, onAddTableware}) => {
         },
         ekoTableware: {
             price: 2,
-            title: "Zastawa eko - 2 zł/szt"
+            title: "Zastawa eko (szt.)"
         }
 
     }

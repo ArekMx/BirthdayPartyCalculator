@@ -35,13 +35,17 @@
     @include displayFlex(center);
     flex-wrap: wrap;
     color: $dark-red;
-    background-image: url("../images/wallpaper_gold.svg");
+    background-image: url('../images/wallpapper_gold_mobile.png');
     background-size: cover;
     background-repeat: no-repeat;
     // @include wallPaperBoxes((url("../images/wallpaper_gold.svg")));
     @include shadowBoxes ($green);
     .title-header {
+      margin-bottom: 0;
       @include titleBoxes;
+    }
+    @include desktop-main {
+      background-image: url('../images/wallpapper_gold_desktop.png');
     }
   }
 
@@ -58,7 +62,6 @@
         font-size: 3rem;
       }
      }
-     
   }
 
   .count {
@@ -83,12 +86,15 @@
     padding: .5rem;
     font-size: 1.5rem;
     max-width: 600px;
-    color: $gold-dark;
-    flex-wrap: no-wrap;
+    color: $gold;
     position: sticky;
     bottom: 0;
     @include displayFlex(space-between);
     @include shadowBoxes($D);
+    .total__text {
+      display: inline;
+      padding: 5px;
+    }
     .total__price {
       width: 100px;
     }

@@ -70,16 +70,16 @@ export const ComponentTableSelect =({numOfkids}) => {
             <div>
               <p className="title-header">Wybierz dzień tygodnia:</p>
             </div>
-            <div>
+            <div className="selectedPrice">
               <div>
-              <SelectedPrice price={prices.week.price} title={prices.week.title} min={prices.week.min} onAdd={setBtn} currentPrice={pricePerKid}/>
-            </div>
-            <div>
-              <SelectedPrice price={prices.friday.price} title={prices.friday.title} min={prices.friday.min} onAdd={setBtn} currentPrice={pricePerKid}/>
-            </div>
-            <div>
-              <SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid}/>
-            </div>
+                <SelectedPrice price={prices.week.price} title={prices.week.title} min={prices.week.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+              </div>
+              <div>
+                 <SelectedPrice price={prices.friday.price} title={prices.friday.title} min={prices.friday.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+              </div>
+              <div>
+                <SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+              </div>
             </div>
             <div className="info-promotion"> 
               {info ? <p className="info-promotion-text">{text}</p> : null}

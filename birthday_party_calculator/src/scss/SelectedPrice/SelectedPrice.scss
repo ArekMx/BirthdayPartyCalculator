@@ -1,10 +1,17 @@
 @import '../partials/mixins';
 @import '../partials/colors';
 
-  .button {
-    @include btn($deeper, $purple)
-  }
 
+.selectedPrice{
+
+  @include desktop-main {
+    margin-top: 25px;
+  }
+}
   
+.button {
+  @include btn($deeper, $purple)
+}
+
 
   

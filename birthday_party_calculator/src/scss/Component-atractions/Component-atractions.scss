@@ -4,12 +4,15 @@
 
 .atractions {
     margin-top: 1rem;
-    background-image: url('../../images/wallpaper_gold.svg');
+    background-image: url('../../images/wallpapper_gold_mobile_2.png');
     background-size: cover;
     background-repeat: no-repeat;
     @include shadowBoxes($dark-green);
     .sliders-title {
         @include titleBoxes;
+    }
+    @include desktop-main {
+        background-image: url('../../images/wallpapper_gold_desktop_2.png');
     }
     .sliders {
         @include displayFlex(center);
@@ -23,7 +26,7 @@
             margin: 5px;
             @include shadowBoxes(rgba(162, 0, 255, 0.7));
             border-radius: 2rem;
-            color: $green;
+            color: $green_lightsaber;
             
             .atractions-title {
                 display: inline-block;

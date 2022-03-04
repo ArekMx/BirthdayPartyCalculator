@@ -4,10 +4,12 @@
 .extras {
   margin: 1rem 0;
   @include shadowBoxes ($orange-pastel);
-  background-image: url('../../images/wallpaper_gold.svg');
+  background-image: url('../../images/wallpapper_gold_mobile_3.png');
   background-size: cover;
   background-repeat: no-repeat;
-
+  @include desktop-main {
+    background-image: url('../../images/wallpapper_gold_desktop_3.png');
+}
   .extras-title {
     @include titleBoxes;
     width: 90%;
@@ -30,13 +32,17 @@
     text-align: center;
     @include shadowBoxes(rgba(162, 0, 255, 0.7));
       .bouquet-title {
-        @include titleBoxes;
+        display: inline-block;
+        margin: 15px;
+        font-size: 3rem;
+        // font-weight: bold;
+        color: $gold;
       }
       .bouquet-btns {
         @include displayFlex(center);
         text-align: center;
         flex-wrap: wrap;
-        // margin: 20px;
+        margin-bottom: 20px;
         .btn-bouquet {
           margin: 1rem
         }

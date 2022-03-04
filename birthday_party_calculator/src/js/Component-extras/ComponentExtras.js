@@ -59,7 +59,7 @@ export const ComponentExtras =({onAddTotalExtras, onAddTableware}) => {
     return (
             <>
                 <div>
-                    <p className="extras-title">Dodatki do urodzin:</p>
+                    <p className="extras-title">Wybierz extra dodatki:</p>
                 </div>
                 <div className={"assistant"}>
                     <Extra price={extra.assistant.price} name={extra.assistant.title} className="btn-assistant" onAdd={x=>setExtraPriceAssistant(x)} currentExtra={extraPriceAssistant}/>
@@ -75,7 +75,7 @@ export const ComponentExtras =({onAddTotalExtras, onAddTableware}) => {
                     <Extra price={extra.ekoTableware.price} name={extra.ekoTableware.title} className="btn-number" onAdd={x=>setExtraPriceEkoTableware(x)} currentExtra={extraPriceEkoTableware}/>
                 </div>
                 <div className="bouquet">
-                    <p className={"bouquet-title"}>BUKIETY BALONOWE</p>
+                    <p className={"bouquet-title"}>Bukiety balonowe</p>
                     <div className={"bouquet-btns"}>
                         <div className="btn-bouquet">
                             <ExtraBaloons price={extra.bouquet[1].price} name={extra.bouquet[1].balloon} className="btn-baloons" onAdd={x=>setExtraPriceBaloons(x)} currentExtra={extraPriceBaloons}/>

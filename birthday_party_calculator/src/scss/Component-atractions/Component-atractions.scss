@@ -23,19 +23,8 @@
             margin: 5px;
             @include shadowBoxes(rgba(162, 0, 255, 0.7));
             border-radius: 2rem;
-            // color: $orange;
-            .pigtails {
-                color: $light-green;
-            }
-            .face-painting {
-                color: $fuchsia;
-            }
-            .tatoos {
-                color: $orange;
-            }
-            .baloons {
-                color: $green;
-            }
+            color: $green;
+            
             .atractions-title {
                 display: inline-block;
                 margin: .25rem;

@@ -13,37 +13,36 @@ function App() {
 
   const [total, setTotal] = useState('0');
 
-
   const [totalAtractions, setTotalAtractions] = useState('');
   const [totalExtras, setTotalExtras] = useState('');  
   const [extraPriceEkoTableware, setExtraPriceEkoTableware] = useState('');
 
-  // console.log(numOfKids);
-  // console.log(extraPriceEkoTableware);
-
   const totalAll = (numOfKids, moneyPerKid) => {
 
+
+    console.log(numOfKids);
 
     let costPerKid = Number(moneyPerKid) + Number(extraPriceEkoTableware);
     let productOfNumPrice = numOfKids * costPerKid;
     let sumOfTotalAtractExtras = totalAtractions + totalExtras;
 
-
-
     if (numOfKids > 10 && moneyPerKid === "38") {
-      setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
-      if (numOfKids > 21) {
-        setTotal((productOfNumPrice - costPerKid*2) + sumOfTotalAtractExtras);
+        setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
+        if (numOfKids > 21) {
+          setTotal((productOfNumPrice - costPerKid*2) + sumOfTotalAtractExtras);
+        }
+      } else if (numOfKids > 10 && moneyPerKid === "42") {
+        setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
+        if (numOfKids > 21) {
+          setTotal((productOfNumPrice - costPerKid*2) + sumOfTotalAtractExtras);
+        }
+      } else {
+        setTotal(productOfNumPrice + sumOfTotalAtractExtras);
       }
-    } else if (numOfKids > 10 && moneyPerKid === "42") {
-      setTotal((productOfNumPrice - costPerKid) + sumOfTotalAtractExtras);
-      if (numOfKids > 21) {
-        setTotal((productOfNumPrice - costPerKid*2) + sumOfTotalAtractExtras);
-      }
-    } else {
-      setTotal(productOfNumPrice + sumOfTotalAtractExtras);
-    }
+    
+      
 
+    
   }
 
 

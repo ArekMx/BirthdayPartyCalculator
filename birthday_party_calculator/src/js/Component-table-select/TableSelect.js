@@ -11,19 +11,34 @@ export const ComponentTableSelect =({numOfkids}) => {
   const [numberOfKids, setNumberOfKids] = useState('7');
   const [minNumSlider, setMinNumSlider] = useState('7');
   const [total, setTotal] = useState('0');
+  const [showSliderMain, setShowSliderMain] = useState('')
+
+
 
   const showSlider = (price) => {
-    if (price === "44") {
-      setMinNumSlider(8) 
+    if (price === "45") {
+      setMinNumSlider(8)
+      // setShowSliderMain(true);
+      if(numberOfKids === '7'){
+      setNumberOfKids(8);
+      }
     } else {
       setMinNumSlider(7)
+      if(minNumSlider === 8 && numberOfKids === 8) {
+        setNumberOfKids(7);
+      }
+      // setNumberOfKids(8)
+      // setShowSliderMain(false);
+      // if(numberOfKids === 8) {
+      //   setMinNumSlider(7);
+      // }
     }
   }
 
   useEffect (() => {
     showSlider(pricePerKid);
     // console.log(pricePerKid, numberOfKids);
-  }, [pricePerKid]);
+  }, [pricePerKid, numberOfKids, minNumSlider]);
 
 
   const prices = {
@@ -44,22 +59,25 @@ export const ComponentTableSelect =({numOfkids}) => {
     }
   }
 
+  numOfkids(numberOfKids, pricePerKid);
 
   const setBtn = (currentPrice) => {
     setPricePerKid(currentPrice)
   };
 
   const handleNumberOfKids =(selectedNumber) => {
-    setNumberOfKids(selectedNumber)
+    setNumberOfKids(selectedNumber);
+    
   };
 
-  numOfkids(numberOfKids, pricePerKid);
+  
   
   useEffect (()=> {
 
     countTotalTableSelect(numberOfKids, pricePerKid, setTotal, setInfo, setText);
  
-  },[numberOfKids, pricePerKid])
+
+  },[numberOfKids, pricePerKid, minNumSlider])
 
   
   const [info, setInfo] = useState(true);
@@ -90,7 +108,17 @@ export const ComponentTableSelect =({numOfkids}) => {
               </div>
               <div className="slider">
                 <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids}/>
-              </div>      
+              </div>       
+              {/* {
+              showSliderMain ? 
+            <div className="slider">
+              <Slider value={numberOfKids} min={8} max={30} onChange={handleNumberOfKids}/>
+            </div> 
+            :
+            <div className="slider">
+              <Slider value={numberOfKids} min={7} max={30} onChange={handleNumberOfKids}/>
+              </div> 
+            } */}
             </div>
             {/* <div className="count">
               <div className="slider">

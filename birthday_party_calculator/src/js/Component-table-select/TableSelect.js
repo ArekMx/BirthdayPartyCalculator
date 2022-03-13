@@ -5,7 +5,7 @@ import Slider from 'react-smooth-range-input';
 import { countTotalTableSelect } from "./functions";
 
 
-export const ComponentTableSelect =({numOfkids}) => {
+export const ComponentTableSelect =({numOfkids, handleChange}) => {
     
   const [pricePerKid, setPricePerKid] = useState('');
   const [numberOfKids, setNumberOfKids] = useState('7');
@@ -18,7 +18,6 @@ export const ComponentTableSelect =({numOfkids}) => {
   const showSlider = (price) => {
     if (price === "45") {
       setMinNumSlider(8)
-      // setShowSliderMain(true);
       if(numberOfKids === '7'){
       setNumberOfKids(8);
       }
@@ -83,6 +82,10 @@ export const ComponentTableSelect =({numOfkids}) => {
   const [info, setInfo] = useState(true);
   const [text, setText] = useState('')
 
+  // const handleChange = () => {
+
+  // }
+
     return (
             <>
             <div>
@@ -101,7 +104,14 @@ export const ComponentTableSelect =({numOfkids}) => {
             </div>
             <div className="info-promotion"> 
               {info ? <p className="info-promotion-text">{text}</p> : null}
-            </div> 
+            </div>
+            <div>
+              <select name="myField" onChange={handleChange}>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+              </select>
+            </div>
             <div className="count">
               <div>
                 <p className="slider-title">Wybierz liczbę dzieci:</p>

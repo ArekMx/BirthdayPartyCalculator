@@ -20,7 +20,7 @@ function App() {
   const totalAll = (numOfKids, moneyPerKid) => {
 
 
-    console.log(numOfKids);
+    // console.log(numOfKids);
 
     let costPerKid = Number(moneyPerKid) + Number(extraPriceEkoTableware);
     let productOfNumPrice = numOfKids * costPerKid;

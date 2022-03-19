@@ -9,7 +9,7 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
     
   const [pricePerKid, setPricePerKid] = useState('');
   const [numberOfKids, setNumberOfKids] = useState('7');
-  const [minNumSlider, setMinNumSlider] = useState('7');
+  // const [minNumSlider, setMinNumSlider] = useState('7');
   const [total, setTotal] = useState('0');
   const [showSliderMain, setShowSliderMain] = useState('')
 
@@ -17,27 +17,21 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
 
   const showSlider = (price) => {
     if (price === "45") {
-      setMinNumSlider(8)
-      if(numberOfKids === '7'){
-      setNumberOfKids(8);
+      setShowSliderMain(true)
+      if(numberOfKids == '7'){
+        setNumberOfKids(8);
       }
     } else {
-      setMinNumSlider(7)
-      if(minNumSlider === 8 && numberOfKids === 8) {
+      setShowSliderMain(false)
+      if(price !== "45" && numberOfKids === 8) {
         setNumberOfKids(7);
       }
-      // setNumberOfKids(8)
-      // setShowSliderMain(false);
-      // if(numberOfKids === 8) {
-      //   setMinNumSlider(7);
-      // }
     }
   }
 
   useEffect (() => {
     showSlider(pricePerKid);
-    // console.log(pricePerKid, numberOfKids);
-  }, [pricePerKid, numberOfKids, minNumSlider]);
+  }, [pricePerKid, numberOfKids]);
 
 
   const prices = {
@@ -64,11 +58,12 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
     setPricePerKid(currentPrice)
   };
 
-  const handleNumberOfKids =(selectedNumber) => {
-    setNumberOfKids(selectedNumber);
-    
-  };
+  // const handleNumberOfKids =(selectedNumber) => {
+  //   setNumberOfKids(selectedNumber);
 
+  // };
+
+  console.log(numberOfKids);
   
   
   useEffect (()=> {
@@ -76,18 +71,18 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
     countTotalTableSelect(numberOfKids, pricePerKid, setTotal, setInfo, setText);
  
 
-  },[numberOfKids, pricePerKid, minNumSlider])
+  },[numberOfKids, pricePerKid])
 
   
   const [info, setInfo] = useState(true);
   const [text, setText] = useState('')
 
-  // const handleChange = () => {
 
-  // }
+  // const [selctedNum, setSelctedNum] = useState('')
+
 
     return (
-            <>
+            <div>
             <div>
               <p className="title-header">Wybierz dzień tygodnia:</p>
             </div>
@@ -106,35 +101,96 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
               {info ? <p className="info-promotion-text">{text}</p> : null}
             </div>
             <div>
-              <select name="myField" onChange={handleChange}>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-              </select>
+            {
+              showSliderMain ? 
+              <select onChange={(e)=>{setNumberOfKids(e.target.value)}}>
+             
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+                <option value='13'>13</option>
+                <option value='14'>14</option>
+                <option value='15'>15</option>
+                <option value='16'>16</option>
+                <option value='17'>17</option>
+                <option value='18'>18</option>
+                <option value='19'>19</option>
+                <option value='20'>20</option>
+                <option value='21'>21</option>
+                <option value='22'>22</option>
+                <option value='23'>23</option>
+                <option value='24'>24</option>
+                <option value='25'>25</option>
+                <option value='26'>26</option>
+                <option value='27'>27</option>
+                <option value='28'>28</option>
+                <option value='29'>29</option>
+                <option value='30'>30</option>
+            </select>
+            :
+            <select onChange={(e)=>{setNumberOfKids(e.target.value)}}>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+                <option value='13'>13</option>
+                <option value='14'>14</option>
+                <option value='15'>15</option>
+                <option value='16'>16</option>
+                <option value='17'>17</option>
+                <option value='18'>18</option>
+                <option value='19'>19</option>
+                <option value='20'>20</option>
+                <option value='21'>21</option>
+                <option value='22'>22</option>
+                <option value='23'>23</option>
+                <option value='24'>24</option>
+                <option value='25'>25</option>
+                <option value='26'>26</option>
+                <option value='27'>27</option>
+                <option value='28'>28</option>
+                <option value='29'>29</option>
+                <option value='30'>30</option>
+            </select>
+            }  
+            
             </div>
-            <div className="count">
+            {/* <div className="count">
               <div>
                 <p className="slider-title">Wybierz liczbę dzieci:</p>
               </div>
               <div className="slider">
                 <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids}/>
               </div>       
-              {/* {
+              {
               showSliderMain ? 
-            <div className="slider">
-              <Slider value={numberOfKids} min={8} max={30} onChange={handleNumberOfKids}/>
-            </div> 
-            :
-            <div className="slider">
-              <Slider value={numberOfKids} min={7} max={30} onChange={handleNumberOfKids}/>
+              <div className="slider">
+                <Slider value={numberOfKids} min={8} max={29} onChange={handleNumberOfKids}/>
+              </div>
+              :
+              <div className="slider">
+                <Slider value={numberOfKids} min={7} max={30} onChange={handleNumberOfKids}/>
               </div> 
-            } */}
-            </div>
-            {/* <div className="count">
+              }
+            </div> */}
+            {/* <div className="count"> 
               <div className="slider">
                 <h3 className="slider-title">Koszt: {total} zł</h3>
               </div>     
-            </div> */}    
-            </>
+            </div>     */} 
+            </div>
     )
 }
+
+
+
+
+
+             
+
+
+            

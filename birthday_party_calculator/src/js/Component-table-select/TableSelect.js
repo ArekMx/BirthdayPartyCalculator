@@ -5,24 +5,29 @@ import Slider from 'react-smooth-range-input';
 import { countTotalTableSelect } from "./functions";
 
 
-export const ComponentTableSelect =({numOfkids, handleChange}) => {
+export const ComponentTableSelect =({numOfkids}) => {
     
   const [pricePerKid, setPricePerKid] = useState('');
   const [numberOfKids, setNumberOfKids] = useState('7');
-  // const [minNumSlider, setMinNumSlider] = useState('7');
+  const [minNumSlider, setMinNumSlider] = useState('7');
   const [total, setTotal] = useState('0');
-  const [showSliderMain, setShowSliderMain] = useState('')
+  // const [showSliderMain, setShowSliderMain] = useState('')
 
-
+  console.log(minNumSlider);
 
   const showSlider = (price) => {
     if (price === "45") {
-      setShowSliderMain(true)
+      // setShowSliderMain(true)
+      setMinNumSlider(8)
       if(numberOfKids == '7'){
         setNumberOfKids(8);
-      }
+      } 
+      // if (numberOfKids > '8' ) {
+      //   setMinNumSlider(numberOfKids-1);
+      // }
     } else {
-      setShowSliderMain(false)
+      // setShowSliderMain(false);
+      setMinNumSlider(7)
       if(price !== "45" && numberOfKids === 8) {
         setNumberOfKids(7);
       }
@@ -58,10 +63,10 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
     setPricePerKid(currentPrice)
   };
 
-  // const handleNumberOfKids =(selectedNumber) => {
-  //   setNumberOfKids(selectedNumber);
+  const handleNumberOfKids =(selectedNumber) => {
+    setNumberOfKids(selectedNumber);
 
-  // };
+  };
 
   console.log(numberOfKids);
   
@@ -82,7 +87,7 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
 
 
     return (
-            <div>
+            <div className="main-count">
             <div>
               <p className="title-header">Wybierz dzień tygodnia:</p>
             </div>
@@ -101,9 +106,9 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
               {info ? <p className="info-promotion-text">{text}</p> : null}
             </div>
             <div>
-            {
+            {/* {
               showSliderMain ? 
-              <select onChange={(e)=>{setNumberOfKids(e.target.value)}}>
+              <select value={numberOfKids} onChange={(e)=>{setNumberOfKids(e.target.value)}}>
              
                 <option value='8'>8</option>
                 <option value='9'>9</option>
@@ -156,17 +161,17 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
                 <option value='29'>29</option>
                 <option value='30'>30</option>
             </select>
-            }  
+            }   */}
             
             </div>
-            {/* <div className="count">
+            <div className="count">
               <div>
                 <p className="slider-title">Wybierz liczbę dzieci:</p>
               </div>
               <div className="slider">
                 <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids}/>
               </div>       
-              {
+              {/* {
               showSliderMain ? 
               <div className="slider">
                 <Slider value={numberOfKids} min={8} max={29} onChange={handleNumberOfKids}/>
@@ -175,13 +180,13 @@ export const ComponentTableSelect =({numOfkids, handleChange}) => {
               <div className="slider">
                 <Slider value={numberOfKids} min={7} max={30} onChange={handleNumberOfKids}/>
               </div> 
-              }
-            </div> */}
+              } */}
+            </div>
             {/* <div className="count"> 
               <div className="slider">
                 <h3 className="slider-title">Koszt: {total} zł</h3>
               </div>     
-            </div>     */} 
+            </div>      */}
             </div>
     )
 }

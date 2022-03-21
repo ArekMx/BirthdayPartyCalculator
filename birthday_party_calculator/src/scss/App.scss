@@ -32,7 +32,14 @@
 
 
   .App-header {
-    @include displayFlex(center);
+    .main-count {
+      @include displayFlex(center);
+      flex-direction: column;
+    }
+    width: 100%;
+    // @include displayFlex(center);
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     color: $dark-red;
     background-image: url('../images/wallpapper_gold_mobile.png');

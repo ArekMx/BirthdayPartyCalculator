@@ -174,7 +174,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
             </div>
             <div className="count">
               <div className="count-title">
-                <p className="slider-title">Wybierz liczbę dzieci:</p>
+                <p className="slider-title">Wybierz liczbę dzieci łącznie z jubilatem:</p>
               </div>
               <div className="count-slider">
                 <Slider value={numberOfKids} min={7} max={30} onChange={handleNumberOfKids}/>

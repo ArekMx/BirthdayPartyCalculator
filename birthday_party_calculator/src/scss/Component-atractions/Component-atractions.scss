@@ -15,7 +15,7 @@
         background-image: url('../../images/wallpapper_gold_desktop_2.png');
     }
     .sliders {
-        @include displayFlex(center);
+        @include displayFlex(start);
         flex-wrap: wrap;
         text-align: center;
         padding-bottom: 15px;

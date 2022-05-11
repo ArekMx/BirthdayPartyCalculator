@@ -8,7 +8,7 @@ import { countTotalTableSelect } from "./functions";
 export const ComponentTableSelect =({numOfkids, onShow}) => {
     
   const [pricePerKid, setPricePerKid] = useState('');
-  const [numberOfKids, setNumberOfKids] = useState('8');
+  const [numberOfKids, setNumberOfKids] = useState('7');
   // const [minNumSlider, setMinNumSlider] = useState('7');
   const [total, setTotal] = useState('0');
   // const [showSliderMain, setShowSliderMain] = useState('')
@@ -97,7 +97,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
     return (
             <div className="main-count">
             <div>
-              <p className="title-header">Wybierz dzień tygodnia (min. liczba dzieci - 8):</p>
+              <p className="title-header">Wybierz dzień tygodnia (w czerwcu 2022 min. liczba dzieci - 7):</p>
             </div>
             <div className="selectedPrice">
               <div>
@@ -177,7 +177,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
                 <p className="slider-title">Wybierz liczbę dzieci:</p>
               </div>
               <div className="count-slider">
-                <Slider value={numberOfKids} min={8} max={30} onChange={handleNumberOfKids}/>
+                <Slider value={numberOfKids} min={7} max={30} onChange={handleNumberOfKids}/>
               </div>       
               {/* {
               showSliderMain ? 

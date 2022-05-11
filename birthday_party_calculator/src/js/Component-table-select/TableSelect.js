@@ -5,14 +5,13 @@ import Slider from 'react-smooth-range-input';
 import { countTotalTableSelect } from "./functions";
 
 
-export const ComponentTableSelect =({numOfkids}) => {
+export const ComponentTableSelect =({numOfkids, onShow}) => {
     
   const [pricePerKid, setPricePerKid] = useState('');
   const [numberOfKids, setNumberOfKids] = useState('8');
   // const [minNumSlider, setMinNumSlider] = useState('7');
   const [total, setTotal] = useState('0');
   // const [showSliderMain, setShowSliderMain] = useState('')
-
   // console.log(minNumSlider);
 
   // const showSlider = (price) => {
@@ -44,17 +43,17 @@ export const ComponentTableSelect =({numOfkids}) => {
     week: {
       price: 38,
       title: "Od poniedziałku do czwartku",
-      min: '( 8 - min. liczba dzieci )'
+      min: ''
     },
     friday: {
       price: 42,
       title: "Piątek",
-      min: '( 8 - min. liczba dzieci )'
+      min: ''
     },
     weekend: {
       price: 45,
       title: "Sobota, niedziela i święta",
-      min: '( 8 - min. liczba dzieci )'
+      min: ''
     }
   }
 
@@ -86,21 +85,29 @@ export const ComponentTableSelect =({numOfkids}) => {
 
   // const [selctedNum, setSelctedNum] = useState('')
 
+  // const [showAll, setShowAll] = useState(false)
+
+  // const handleShow =(value)=> {
+  //   // setShowAll(value)
+  //   onShow(value)
+  // };
+
+
 
     return (
             <div className="main-count">
             <div>
-              <p className="title-header">Wybierz dzień tygodnia:</p>
+              <p className="title-header">Wybierz dzień tygodnia (min. liczba dzieci - 8):</p>
             </div>
             <div className="selectedPrice">
               <div>
-                <SelectedPrice price={prices.week.price} title={prices.week.title} min={prices.week.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+                <SelectedPrice price={prices.week.price} title={prices.week.title} min={prices.week.min} onAdd={setBtn} currentPrice={pricePerKid} onShow={x=>onShow(x)}/>
               </div>
               <div>
-                 <SelectedPrice price={prices.friday.price} title={prices.friday.title} min={prices.friday.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+                 <SelectedPrice price={prices.friday.price} title={prices.friday.title} min={prices.friday.min} onAdd={setBtn} currentPrice={pricePerKid} onShow={x=>onShow(x)}/>
               </div>
               <div>
-                <SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid}/>
+                <SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid} onShow={x=>onShow(x)}/>
               </div>
             </div>
             <div className="info-promotion"> 
@@ -166,10 +173,10 @@ export const ComponentTableSelect =({numOfkids}) => {
             
             </div>
             <div className="count">
-              <div>
+              <div className="count-title">
                 <p className="slider-title">Wybierz liczbę dzieci:</p>
               </div>
-              <div className="slider">
+              <div className="count-slider">
                 <Slider value={numberOfKids} min={8} max={30} onChange={handleNumberOfKids}/>
               </div>       
               {/* {

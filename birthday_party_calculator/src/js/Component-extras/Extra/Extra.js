@@ -43,7 +43,7 @@ export const Extra =({price, name, className, onAdd, currentExtra}) => {
                     }}
                 className={className}>{name} - {price} zł
                 </button>
-                <span  className={ styleBtn ? "center label__checkbox__checked" : "center label__checkbox"}>
+                <span  className={ styleBtn ? "center label__checkbox__checked__extra" : "center label__checkbox"}>
                     <i className="fa fa-check icon"></i>
                 </span>
             </div>

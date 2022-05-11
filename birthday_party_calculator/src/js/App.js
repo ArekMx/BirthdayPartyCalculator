@@ -18,8 +18,6 @@ function App() {
   const [extraPriceEkoTableware, setExtraPriceEkoTableware] = useState('');
 
   const totalAll = (numOfKids, moneyPerKid) => {
-
-
     // console.log(numOfKids);
 
     let costPerKid = Number(moneyPerKid) + Number(extraPriceEkoTableware);
@@ -39,12 +37,14 @@ function App() {
       } else {
         setTotal(productOfNumPrice + sumOfTotalAtractExtras);
       }
-    
-      
-
-    
   }
 
+  const [showAll, setShowAll] = useState(false)
+
+  const handleShow =(value)=> {
+    setShowAll(value)
+    console.log(showAll);
+  };
 
   return (
     <div className="App container">
@@ -53,24 +53,29 @@ function App() {
         <img className={"calculator"} src={calculator} alt={"Kalkulator_urodzin"}/>
       </div>
       <header className="App-header">
-        <ComponentTableSelect numOfkids={totalAll}/>
+        <ComponentTableSelect numOfkids={totalAll} onShow={handleShow}/>
       </header>
-      <section>
+      {
+        showAll ? (
+        <>
+        <section>
         <ComponentAtractions onUp={x=>setTotalAtractions(x)}/>
-      </section>
-      <section className="extras">
+        </section>
+        <section className="extras">
         <ComponentExtras onAddTotalExtras={x=>setTotalExtras(x)} onAddTableware={x=>setExtraPriceEkoTableware(x)}/>
-      </section>
+        </section>
 
-      <section className="total">
+        <section className="total">
         <div className="total__text">
           <h1 >Łączna koszt imprezy urodzinowej:</h1>
         </div>
         <div className="total__price">
           <h1>{total} zł</h1>
         </div>
-      </section>
-      
+        </section>
+        </>  
+        ) : null
+      }
     </div>
   );
 }

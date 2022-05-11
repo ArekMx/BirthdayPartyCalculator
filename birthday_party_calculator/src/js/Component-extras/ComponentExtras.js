@@ -68,9 +68,9 @@ export const ComponentExtras =({onAddTotalExtras, onAddTableware}) => {
                 <div className={"numberBaloon"}>
                     <Extra price={extra.numberBaloon.price} name={extra.numberBaloon.title} className="btn-number" onAdd={x=>setExtraNumBaloon(x)} currentExtra={extraNumBaloon}/>
                 </div>
-                <div className={"piniata"}>
+                {/* <div className={"piniata"}>
                     <Extra price={extra.piñata.price} name={extra.piñata.title} className="btn-number" onAdd={x=>setExtraPricePinata(x)} currentExtra={extraPricePinata}/>
-                </div>
+                </div> */}
                 <div className={"ekoTableware"}>
                     <Extra price={extra.ekoTableware.price} name={extra.ekoTableware.title} className="btn-number" onAdd={x=>setExtraPriceEkoTableware(x)} currentExtra={extraPriceEkoTableware}/>
                 </div>

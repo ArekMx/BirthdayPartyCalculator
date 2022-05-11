@@ -67,7 +67,7 @@ function App() {
 
         <section className="total">
         <div className="total__text">
-          <h1 >Łączna koszt imprezy urodzinowej:</h1>
+          <h1 >Łączny koszt imprezy urodzinowej:</h1>
         </div>
         <div className="total__price">
           <h1>{total} zł</h1>

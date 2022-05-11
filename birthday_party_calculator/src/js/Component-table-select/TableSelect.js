@@ -8,47 +8,48 @@ import { countTotalTableSelect } from "./functions";
 export const ComponentTableSelect =({numOfkids}) => {
     
   const [pricePerKid, setPricePerKid] = useState('');
-  const [numberOfKids, setNumberOfKids] = useState('7');
-  const [minNumSlider, setMinNumSlider] = useState('7');
+  const [numberOfKids, setNumberOfKids] = useState('8');
+  // const [minNumSlider, setMinNumSlider] = useState('7');
   const [total, setTotal] = useState('0');
   // const [showSliderMain, setShowSliderMain] = useState('')
 
-  console.log(minNumSlider);
+  // console.log(minNumSlider);
 
-  const showSlider = (price) => {
-    if (price === "45") {
-      // setShowSliderMain(true)
-      setMinNumSlider(8)
-      if(numberOfKids == '7'){
-        setNumberOfKids(8);
-      } 
-      // if (numberOfKids > '8' ) {
-      //   setMinNumSlider(numberOfKids-1);
-      // }
-    } else {
-      // setShowSliderMain(false);
-      setMinNumSlider(7)
-      if(price !== "45" && numberOfKids === 8) {
-        setNumberOfKids(7);
-      }
-    }
-  }
+  // const showSlider = (price) => {
+  //   if (price === "45") {
+  //     // setShowSliderMain(true)
+  //     setMinNumSlider(8);
 
-  useEffect (() => {
-    showSlider(pricePerKid);
-  }, [pricePerKid, numberOfKids]);
+  //     if(numberOfKids == '7'){
+  //       setNumberOfKids(8);
+  //     };
+  //     // if (numberOfKids > '8' ) {
+  //     //   setMinNumSlider(Number(numberOfKids)-1);
+  //     // };
+  //   } else {
+  //     // setShowSliderMain(false);
+  //     setMinNumSlider(7)
+  //     if(price !== "45" && numberOfKids === 8) {
+  //       setNumberOfKids(7);
+  //     }
+  //   }
+  // }
+
+  // useEffect (() => {
+  //   showSlider(pricePerKid);
+  // }, [pricePerKid, numberOfKids]);
 
 
   const prices = {
     week: {
       price: 38,
       title: "Od poniedziałku do czwartku",
-      min: '( 7 - min. liczba dzieci )'
+      min: '( 8 - min. liczba dzieci )'
     },
     friday: {
       price: 42,
       title: "Piątek",
-      min: '( 7 - min. liczba dzieci )'
+      min: '( 8 - min. liczba dzieci )'
     },
     weekend: {
       price: 45,
@@ -169,7 +170,7 @@ export const ComponentTableSelect =({numOfkids}) => {
                 <p className="slider-title">Wybierz liczbę dzieci:</p>
               </div>
               <div className="slider">
-                <Slider value={numberOfKids} min={minNumSlider} max={30} onChange={handleNumberOfKids}/>
+                <Slider value={numberOfKids} min={8} max={30} onChange={handleNumberOfKids}/>
               </div>       
               {/* {
               showSliderMain ? 

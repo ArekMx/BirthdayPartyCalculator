@@ -49,7 +49,7 @@ export const ExtraBaloons =({price, name, className, onAdd, currentExtra}) => {
                         }}>
                     <i className="fa fa-check icon"
                         style={{
-                            backgroundColor: styleOnClick('white')
+                            backgroundColor: "yellow"
                     }}>
                     </i>
                 </span>

@@ -21,7 +21,7 @@ export const SelectedPrice =({price, title, min, onAdd, currentPrice}) => {
                     }}
                 className={
                     "button"
-                }> {title} - {price}zł<br></br>{min}</button>
+                }> {title} - {price} zł<br></br>{min}</button>
             </div>
     )
 }

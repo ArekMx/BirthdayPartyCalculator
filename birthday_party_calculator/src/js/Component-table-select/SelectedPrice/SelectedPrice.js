@@ -26,9 +26,11 @@ export const SelectedPrice =({price, title, min, onAdd, currentPrice, onShow}) =
                     }}
                 className={"price-btns"}> 
                 {title}
+                
                 {/* {price} */}
                 <br></br>
-                <h1 style={{lineHeight: "1px"}}> {price} zł</h1>
+                {price} zł
+                {/* <h1 style={{lineHeight: "1px"}}> {price} zł</h1> */}
                 {min}
                 </button>
             </div>

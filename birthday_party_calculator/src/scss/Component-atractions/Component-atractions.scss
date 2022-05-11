@@ -34,7 +34,9 @@
                 font-size: 2rem;
             }
         }
-        
+        @include tablet-main {
+            @include displayFlex(center);
+        }
     }
     .total-atractions {
         display: inline-block;

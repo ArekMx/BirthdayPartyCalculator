@@ -37,8 +37,8 @@ export const Extra =({price, name, className, onAdd, currentExtra}) => {
                 value={price}
                 onClick={handleAddAddition}
                 style={{
-                    // color: styleBtn ? "#fff901" : null, 
-                    // background: styleBtn ? "olivedrab" : null,
+                    color: styleBtn ? "#fff901" : null, 
+                    background: styleBtn ? "olivedrab" : null,
                     boxShadow: styleBtn ? boxShadowStyle : null
                     }}
                 className={className}>{name} - {price} zł

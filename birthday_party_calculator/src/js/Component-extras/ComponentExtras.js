@@ -26,7 +26,7 @@ export const ComponentExtras =({onAddTotalExtras, onAddTableware}) => {
         },
         numberBaloon: {
             price: 30,
-            title: "Balon cyfra na powietrze",
+            title: "Balon cyfra na powietrze (szt.)",
         },
         piñata: {
             price: 100,

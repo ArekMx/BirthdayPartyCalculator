@@ -24,9 +24,13 @@ export const SelectedPrice =({price, title, min, onAdd, currentPrice, onShow}) =
                         transform: styleOnClick("none"),
                         boxShadow: styleOnClick(boxShadowStyle)
                     }}
-                className={
-                    "button"
-                }> {title} - {price} zł<br></br>{min}</button>
+                className={"price-btns"}> 
+                {title}
+                {/* {price} */}
+                <br></br>
+                <h1 style={{lineHeight: "1px"}}> {price} zł</h1>
+                {min}
+                </button>
             </div>
     )
 }

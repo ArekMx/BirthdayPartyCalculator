@@ -9,9 +9,36 @@
   }
 }
   
-.button {
-  @include btn($deeper, $purple)
-}
 
+.price-btns {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: .5rem 1.7rem;
+    margin: 2rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    will-change: transform;
+    // letter-spacing: .05rem;
+    background: $white;
+    color: $deeper;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    border-radius: .5rem;
+    font-family: 'Itim', cursive;
+    
+    @include box_shadow(5);
+    &:hover {
+      color: $yellow;
+      background-color: $purple;
+    }
+    // .price-size {
+    //   font-size: large;
+    // }
+  }
 
   

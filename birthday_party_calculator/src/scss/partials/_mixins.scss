@@ -77,10 +77,10 @@
     font-size: 2rem;
     
     @include box_shadow(5);
-    &:hover {
-      color: $yellow;
-      background-color: $backGroundColorHover;
-    }
+    // &:hover {
+    //   color: $yellow;
+    //   background-color: $backGroundColorHover;
+    // }
 }
 
 @mixin icon ($backgroundColor, $iconColor) {

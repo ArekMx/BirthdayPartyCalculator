@@ -29,7 +29,7 @@ export const SelectedPrice =({price, title, min, onAdd, currentPrice, onShow}) =
                 
                 {/* {price} */}
                 <br></br>
-                {price} zł
+                {price} zł od dziecka
                 {/* <h1 style={{lineHeight: "1px"}}> {price} zł</h1> */}
                 {min}
                 </button>

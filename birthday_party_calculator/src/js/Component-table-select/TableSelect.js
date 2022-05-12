@@ -97,7 +97,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
     return (
             <div className="main-count">
             <div>
-              <p className="title-header">Wybierz dzień tygodnia (w czerwcu 2022 min. liczba dzieci - 7):</p>
+              <p className="title-header">Wybierz dzień tygodnia:</p>
             </div>
             <div className="selectedPrice">
               <div>
@@ -110,9 +110,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
                 <SelectedPrice price={prices.weekend.price} title={prices.weekend.title} min={prices.weekend.min} onAdd={setBtn} currentPrice={pricePerKid} onShow={x=>onShow(x)}/>
               </div>
             </div>
-            <div className="info-promotion"> 
-              {info ? <p className="info-promotion-text">{text}</p> : null}
-            </div>
+            
             <div>
             {/* {
               showSliderMain ? 
@@ -189,6 +187,9 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
                 <Slider value={numberOfKids} min={7} max={30} onChange={handleNumberOfKids}/>
               </div> 
               } */}
+            </div>
+            <div className="info-promotion"> 
+              {info ? <p className="info-promotion-text">{text}</p> : null}
             </div>
             {/* <div className="count"> 
               <div className="slider">

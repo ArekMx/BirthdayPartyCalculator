@@ -36,9 +36,9 @@ export const ExtraBaloons =({price, name, className, onAdd, currentExtra}) => {
                     transform: styleOnClick("none"),
                     boxShadow: styleOnClick(boxShadowStyle)
                 }}
-                className={className}>{name} - {price}zł  
+                className={className}>{name} <br></br>{price}zł  
                 </button>
-                <span  className="center label__checkbox__extrabaloons"
+                {/* <span  className="center label__checkbox__extrabaloons"
                         style={{
                             backgroundColor: (parseFloat(currentExtra) === price ? "#285ae4" : "white"),
                             border: (parseFloat(currentExtra) === price ? "4px solid #285ae4" : "5px solid rgba(0,0,0,0.1)"),
@@ -46,7 +46,7 @@ export const ExtraBaloons =({price, name, className, onAdd, currentExtra}) => {
                         }}>
                     <i className="fa fa-check icon">
                     </i>
-                </span>
+                </span> */}
             </div>
     )
 }

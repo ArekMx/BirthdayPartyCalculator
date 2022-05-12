@@ -168,7 +168,9 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
                 <option value='30'>30</option>
             </select>
             }   */}
-            
+            <div className="info-promotion"> 
+              {info ? <p className="info-promotion-text">{text}</p> : null}
+            </div>
             </div>
             <div className="count">
               <div className="count-title">
@@ -188,9 +190,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
               </div> 
               } */}
             </div>
-            <div className="info-promotion"> 
-              {info ? <p className="info-promotion-text">{text}</p> : null}
-            </div>
+            
             {/* <div className="count"> 
               <div className="slider">
                 <h3 className="slider-title">Koszt: {total} zł</h3>

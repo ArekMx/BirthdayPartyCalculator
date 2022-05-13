@@ -43,7 +43,6 @@ function App() {
 
   const handleShow =(value)=> {
     setShowAll(value)
-    console.log(showAll);
   };
 
   return (

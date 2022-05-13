@@ -67,8 +67,6 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
     setNumberOfKids(selectedNumber);
 
   };
-
-  console.log(numberOfKids);
   
   
   useEffect (()=> {

@@ -46,7 +46,7 @@
     justify-content: center;
     flex-wrap: wrap;
     color: $dark-red;
-    background-image: url('../images/wallpapper_gold_mobile.png');
+    background-image: url('../images/wallpapper_gold_mobile_1.png');
     background-size: cover;
     background-repeat: no-repeat;
     // @include wallPaperBoxes((url("../images/wallpaper_gold.svg")));
@@ -55,9 +55,9 @@
       margin-bottom: 0;
       @include titleBoxes;
     }
-    @include desktop-main {
-      background-image: url('../images/wallpapper_gold_desktop.png');
-    }
+    // @include desktop-main {
+    //   background-image: url('../images/wallpapper_gold_desktop.png');
+    // }
   }
 
   .info-promotion {

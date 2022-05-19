@@ -10,7 +10,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
   const [pricePerKid, setPricePerKid] = useState('');
   const [numberOfKids, setNumberOfKids] = useState('7');
   // const [minNumSlider, setMinNumSlider] = useState('7');
-  const [total, setTotal] = useState('0');
+  // const [total, setTotal] = useState('0');
   // const [showSliderMain, setShowSliderMain] = useState('')
   // console.log(minNumSlider);
 
@@ -72,7 +72,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
   
   useEffect (()=> {
 
-    countTotalTableSelect(numberOfKids, pricePerKid, setTotal, setInfo, setText);
+    countTotalTableSelect(numberOfKids, pricePerKid, setInfo, setText);
  
 
   },[numberOfKids, pricePerKid])

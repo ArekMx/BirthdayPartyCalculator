@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 
 import { ComponentAtractions } from "../js/Component-atractions/ComponentAtractions";
 import { ComponentTableSelect } from "./Component-table-select/TableSelect";

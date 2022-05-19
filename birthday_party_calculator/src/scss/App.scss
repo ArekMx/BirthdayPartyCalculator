@@ -1,21 +1,20 @@
-@import './partials/mixins';
-@import './partials/colors';
-@import './partials/root';
+@import "./partials/mixins";
+@import "./partials/colors";
+@import "./partials/root";
 
 .App {
   text-align: center;
 
   .logos {
-
     display: flex;
     margin-bottom: 15px;
     .logo {
-    width: 40%;
-    @include desktop-main {
-      width: 15%;
-      position: absolute;
-      left: 2%;
-      top: 5%;
+      width: 40%;
+      @include desktop-main {
+        width: 15%;
+        position: absolute;
+        left: 2%;
+        top: 5%;
       }
     }
     .calculator {
@@ -26,10 +25,9 @@
         position: absolute;
         left: 2%;
         top: 20%;
-        }
-     }
+      }
+    }
   }
-
 
   .App-header {
     .main-count {
@@ -39,18 +37,17 @@
     .selectedPrice {
       margin-bottom: 30px;
     }
-    
+
     width: 100%;
     // @include displayFlex(center);
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     color: $dark-red;
-    background-image: url('../images/wallpapper_gold_mobile_1.png');
+    background-image: url("../images/wallpapper_gold_mobile_1.png");
     background-size: cover;
     background-repeat: no-repeat;
-    // @include wallPaperBoxes((url("../images/wallpaper_gold.svg")));
-    @include shadowBoxes ($green);
+    @include shadowBoxes($green);
     .title-header {
       margin-bottom: 0;
       @include titleBoxes;
@@ -61,21 +58,23 @@
   }
 
   .info-promotion {
-     margin: 10px 20px;
-     position: relative;
-     border-radius: 20px;
-     background-color: rgba(162, 0, 255, 0.7);
-     .info-promotion-text {
+    margin: 10px 20px;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgba(162, 0, 255, 0.7);
+    .info-promotion-text {
       font-size: 2rem;
-      color: $green_lightsaber-light; 
+      color: $green_lightsaber-light;
       margin: 1rem;
       padding: 1rem;
       @include desktop-main {
         font-size: 2.5rem;
       }
-     }
-     @include desktop-main {
+    }
+    @include desktop-main {
       margin: 10px 50px;
+      width: 100%;
+        
     }
   }
 
@@ -84,10 +83,10 @@
     font-size: 2rem;
     margin-bottom: 30px;
     .slider-title {
-        color: $yellow;
-        font-size: 2.5rem;
-        margin: 1rem;
-      }
+      color: $yellow;
+      font-size: 2.5rem;
+      margin: 1rem;
+    }
     .count-slider {
       // width: 85%;
       margin: 1rem 2rem;
@@ -98,7 +97,7 @@
 
   .total {
     margin: auto;
-    padding: .5rem;
+    padding: 0.5rem;
     font-size: 1.5rem;
     max-width: 600px;
     color: $gold;
@@ -116,7 +115,6 @@
   }
 }
 
-
 .center {
   position: relative;
   top: 20%;
@@ -127,15 +125,15 @@
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
-  border: 5px solid rgba(0,0,0,0.1);
+  border: 5px solid rgba(0, 0, 0, 0.1);
   background: white;
-  transition: border .3s ease;
+  transition: border 0.3s ease;
   i.icon {
     opacity: 0.2;
-    transition: opacity .3s .1s ease;
+    transition: opacity 0.3s 0.1s ease;
     -webkit-text-stroke: 3px rgba(0, 0, 0, 0.5);
   }
-  
+
   // &:hover {
   //   border: 5px solid rgba(0,0,0,0.2);
   // }
@@ -148,19 +146,18 @@
   border-radius: 50%;
   // border: 5px solid rgba(0,0,0,0.1);
   // background: white;
-  transition: border .3s ease;
+  transition: border 0.3s ease;
   // i.icon {
   //   opacity: 0.2;
   //   transition: opacity .3s .1s ease;
   //   -webkit-text-stroke: 3px rgba(0, 0, 0, 0.5);
   // }
-  
+
   // &:hover {
   //   border: 5px solid rgba(0,0,0,0.2);
   // }
 }
 
 .label__checkbox__checked__extra {
-  @include icon (#6b8e23, yellow)
+  @include icon(#6b8e23, yellow);
 }
-

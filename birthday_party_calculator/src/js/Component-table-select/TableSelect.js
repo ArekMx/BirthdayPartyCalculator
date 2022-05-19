@@ -57,6 +57,7 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
     }
   }
 
+
   numOfkids(numberOfKids, pricePerKid);
 
   const setBtn = (currentPrice) => {
@@ -89,11 +90,11 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
   //   // setShowAll(value)
   //   onShow(value)
   // };
+  
 
-
-
-    return (
-            <div className="main-count">
+  
+  return (
+    <div className="main-count">
             <div>
               <p className="title-header">Wybierz dzień tygodnia:</p>
             </div>
@@ -113,8 +114,8 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
             {/* {
               showSliderMain ? 
               <select value={numberOfKids} onChange={(e)=>{setNumberOfKids(e.target.value)}}>
-             
-                <option value='8'>8</option>
+              
+              <option value='8'>8</option>
                 <option value='9'>9</option>
                 <option value='10'>10</option>
                 <option value='11'>11</option>

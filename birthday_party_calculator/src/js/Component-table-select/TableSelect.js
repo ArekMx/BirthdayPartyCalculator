@@ -3,6 +3,7 @@ import {SelectedPrice} from './SelectedPrice/SelectedPrice';
 import Slider from 'react-smooth-range-input';
 
 import { countTotalTableSelect } from "./functions";
+import jubilat_gratis from '../../images/jubilat_gratis.svg'
 
 
 export const ComponentTableSelect =({numOfkids, onShow}) => {
@@ -168,7 +169,12 @@ export const ComponentTableSelect =({numOfkids, onShow}) => {
             </select>
             }   */}
             <div className="info-promotion"> 
-              {info ? <p className="info-promotion-text">{text}</p> : null}
+              {info ? 
+              <div>
+                <img src={jubilat_gratis} alt="Icon_Jubilat_gratis"/>
+                <p className="info-promotion-text">{text}</p>
+              </div>
+               : null}
             </div>
             </div>
             <div className="count">
